@@ -17,5 +17,7 @@
  * @package    lib.model
  */
 class Client extends BaseClient {
-
+    public function __toString(){
+        return $this->getNom()+" "+$this->getPrenom();
+    }
 } // Client

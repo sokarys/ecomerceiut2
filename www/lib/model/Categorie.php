@@ -17,5 +17,7 @@
  * @package    lib.model
  */
 class Categorie extends BaseCategorie {
-
+    public function __toString(){
+        return $this->getLibelle();
+    }
 } // Categorie

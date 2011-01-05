@@ -17,5 +17,7 @@
  * @package    lib.model
  */
 class Commande extends BaseCommande {
-
+    public function __toString(){
+        return $this->getId();
+    }
 } // Commande
