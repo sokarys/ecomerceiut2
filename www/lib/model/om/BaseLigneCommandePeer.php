@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base static class for performing query and update operations on the 'commande' table.
+ * Base static class for performing query and update operations on the 'ligne_commande' table.
  *
  * 
  *
@@ -11,55 +11,46 @@
  *
  * @package    lib.model.om
  */
-abstract class BaseCommandePeer {
+abstract class BaseLigneCommandePeer {
 
 	/** the default database name for this class */
 	const DATABASE_NAME = 'propel';
 
 	/** the table name for this class */
-	const TABLE_NAME = 'commande';
+	const TABLE_NAME = 'ligne_commande';
 
 	/** the related Propel class for this table */
-	const OM_CLASS = 'Commande';
+	const OM_CLASS = 'LigneCommande';
 
 	/** A class that can be returned by this peer. */
-	const CLASS_DEFAULT = 'lib.model.Commande';
+	const CLASS_DEFAULT = 'lib.model.LigneCommande';
 
 	/** the related TableMap class for this table */
-	const TM_CLASS = 'CommandeTableMap';
+	const TM_CLASS = 'LigneCommandeTableMap';
 	
 	/** The total number of columns. */
-	const NUM_COLUMNS = 7;
+	const NUM_COLUMNS = 4;
 
 	/** The number of lazy-loaded columns. */
 	const NUM_LAZY_LOAD_COLUMNS = 0;
 
-	/** the column name for the CLIENT_ID field */
-	const CLIENT_ID = 'commande.CLIENT_ID';
+	/** the column name for the COMMANDE_ID field */
+	const COMMANDE_ID = 'ligne_commande.COMMANDE_ID';
 
 	/** the column name for the ARTICLE_ID field */
-	const ARTICLE_ID = 'commande.ARTICLE_ID';
+	const ARTICLE_ID = 'ligne_commande.ARTICLE_ID';
 
 	/** the column name for the QUANTITE field */
-	const QUANTITE = 'commande.QUANTITE';
+	const QUANTITE = 'ligne_commande.QUANTITE';
 
 	/** the column name for the PRIX field */
-	const PRIX = 'commande.PRIX';
-
-	/** the column name for the CREATED_AT field */
-	const CREATED_AT = 'commande.CREATED_AT';
-
-	/** the column name for the ETAT field */
-	const ETAT = 'commande.ETAT';
-
-	/** the column name for the ID field */
-	const ID = 'commande.ID';
+	const PRIX = 'ligne_commande.PRIX';
 
 	/**
-	 * An identiy map to hold any loaded instances of Commande objects.
+	 * An identiy map to hold any loaded instances of LigneCommande objects.
 	 * This must be public so that other peer classes can access this when hydrating from JOIN
 	 * queries.
-	 * @var        array Commande[]
+	 * @var        array LigneCommande[]
 	 */
 	public static $instances = array();
 
@@ -78,11 +69,11 @@ abstract class BaseCommandePeer {
 	 * e.g. self::$fieldNames[self::TYPE_PHPNAME][0] = 'Id'
 	 */
 	private static $fieldNames = array (
-		BasePeer::TYPE_PHPNAME => array ('ClientId', 'ArticleId', 'Quantite', 'Prix', 'CreatedAt', 'Etat', 'Id', ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('clientId', 'articleId', 'quantite', 'prix', 'createdAt', 'etat', 'id', ),
-		BasePeer::TYPE_COLNAME => array (self::CLIENT_ID, self::ARTICLE_ID, self::QUANTITE, self::PRIX, self::CREATED_AT, self::ETAT, self::ID, ),
-		BasePeer::TYPE_FIELDNAME => array ('client_id', 'article_id', 'quantite', 'prix', 'created_at', 'etat', 'id', ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, )
+		BasePeer::TYPE_PHPNAME => array ('CommandeId', 'ArticleId', 'Quantite', 'Prix', ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('commandeId', 'articleId', 'quantite', 'prix', ),
+		BasePeer::TYPE_COLNAME => array (self::COMMANDE_ID, self::ARTICLE_ID, self::QUANTITE, self::PRIX, ),
+		BasePeer::TYPE_FIELDNAME => array ('commande_id', 'article_id', 'quantite', 'prix', ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
 	/**
@@ -92,11 +83,11 @@ abstract class BaseCommandePeer {
 	 * e.g. self::$fieldNames[BasePeer::TYPE_PHPNAME]['Id'] = 0
 	 */
 	private static $fieldKeys = array (
-		BasePeer::TYPE_PHPNAME => array ('ClientId' => 0, 'ArticleId' => 1, 'Quantite' => 2, 'Prix' => 3, 'CreatedAt' => 4, 'Etat' => 5, 'Id' => 6, ),
-		BasePeer::TYPE_STUDLYPHPNAME => array ('clientId' => 0, 'articleId' => 1, 'quantite' => 2, 'prix' => 3, 'createdAt' => 4, 'etat' => 5, 'id' => 6, ),
-		BasePeer::TYPE_COLNAME => array (self::CLIENT_ID => 0, self::ARTICLE_ID => 1, self::QUANTITE => 2, self::PRIX => 3, self::CREATED_AT => 4, self::ETAT => 5, self::ID => 6, ),
-		BasePeer::TYPE_FIELDNAME => array ('client_id' => 0, 'article_id' => 1, 'quantite' => 2, 'prix' => 3, 'created_at' => 4, 'etat' => 5, 'id' => 6, ),
-		BasePeer::TYPE_NUM => array (0, 1, 2, 3, 4, 5, 6, )
+		BasePeer::TYPE_PHPNAME => array ('CommandeId' => 0, 'ArticleId' => 1, 'Quantite' => 2, 'Prix' => 3, ),
+		BasePeer::TYPE_STUDLYPHPNAME => array ('commandeId' => 0, 'articleId' => 1, 'quantite' => 2, 'prix' => 3, ),
+		BasePeer::TYPE_COLNAME => array (self::COMMANDE_ID => 0, self::ARTICLE_ID => 1, self::QUANTITE => 2, self::PRIX => 3, ),
+		BasePeer::TYPE_FIELDNAME => array ('commande_id' => 0, 'article_id' => 1, 'quantite' => 2, 'prix' => 3, ),
+		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 
 	/**
@@ -145,12 +136,12 @@ abstract class BaseCommandePeer {
 	 *		$c->addJoin(TablePeer::alias("alias1", TablePeer::PRIMARY_KEY_COLUMN), TablePeer::PRIMARY_KEY_COLUMN);
 	 * </code>
 	 * @param      string $alias The alias for the current table.
-	 * @param      string $column The column name for current table. (i.e. CommandePeer::COLUMN_NAME).
+	 * @param      string $column The column name for current table. (i.e. LigneCommandePeer::COLUMN_NAME).
 	 * @return     string
 	 */
 	public static function alias($alias, $column)
 	{
-		return str_replace(CommandePeer::TABLE_NAME.'.', $alias.'.', $column);
+		return str_replace(LigneCommandePeer::TABLE_NAME.'.', $alias.'.', $column);
 	}
 
 	/**
@@ -166,13 +157,10 @@ abstract class BaseCommandePeer {
 	 */
 	public static function addSelectColumns(Criteria $criteria)
 	{
-		$criteria->addSelectColumn(CommandePeer::CLIENT_ID);
-		$criteria->addSelectColumn(CommandePeer::ARTICLE_ID);
-		$criteria->addSelectColumn(CommandePeer::QUANTITE);
-		$criteria->addSelectColumn(CommandePeer::PRIX);
-		$criteria->addSelectColumn(CommandePeer::CREATED_AT);
-		$criteria->addSelectColumn(CommandePeer::ETAT);
-		$criteria->addSelectColumn(CommandePeer::ID);
+		$criteria->addSelectColumn(LigneCommandePeer::COMMANDE_ID);
+		$criteria->addSelectColumn(LigneCommandePeer::ARTICLE_ID);
+		$criteria->addSelectColumn(LigneCommandePeer::QUANTITE);
+		$criteria->addSelectColumn(LigneCommandePeer::PRIX);
 	}
 
 	/**
@@ -191,26 +179,26 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
 		$criteria->setDbName(self::DATABASE_NAME); // Set the correct dbName
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		// BasePeer returns a PDOStatement
@@ -229,7 +217,7 @@ abstract class BaseCommandePeer {
 	 *
 	 * @param      Criteria $criteria object used to create the SELECT statement.
 	 * @param      PropelPDO $con
-	 * @return     Commande
+	 * @return     LigneCommande
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -237,7 +225,7 @@ abstract class BaseCommandePeer {
 	{
 		$critcopy = clone $criteria;
 		$critcopy->setLimit(1);
-		$objects = CommandePeer::doSelect($critcopy, $con);
+		$objects = LigneCommandePeer::doSelect($critcopy, $con);
 		if ($objects) {
 			return $objects[0];
 		}
@@ -254,7 +242,7 @@ abstract class BaseCommandePeer {
 	 */
 	public static function doSelect(Criteria $criteria, PropelPDO $con = null)
 	{
-		return CommandePeer::populateObjects(CommandePeer::doSelectStmt($criteria, $con));
+		return LigneCommandePeer::populateObjects(LigneCommandePeer::doSelectStmt($criteria, $con));
 	}
 	/**
 	 * Prepares the Criteria object and uses the parent doSelect() method to execute a PDOStatement.
@@ -272,12 +260,12 @@ abstract class BaseCommandePeer {
 	public static function doSelectStmt(Criteria $criteria, PropelPDO $con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		if (!$criteria->hasSelectClause()) {
 			$criteria = clone $criteria;
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 
 		// Set the correct dbName
@@ -285,7 +273,7 @@ abstract class BaseCommandePeer {
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 
@@ -301,14 +289,14 @@ abstract class BaseCommandePeer {
 	 * to the cache in order to ensure that the same objects are always returned by doSelect*()
 	 * and retrieveByPK*() calls.
 	 *
-	 * @param      Commande $value A Commande object.
+	 * @param      LigneCommande $value A LigneCommande object.
 	 * @param      string $key (optional) key to use for instance map (for performance boost if key was already calculated externally).
 	 */
-	public static function addInstanceToPool(Commande $obj, $key = null)
+	public static function addInstanceToPool(LigneCommande $obj, $key = null)
 	{
 		if (Propel::isInstancePoolingEnabled()) {
 			if ($key === null) {
-				$key = (string) $obj->getId();
+				$key = serialize(array((string) $obj->getCommandeId(), (string) $obj->getArticleId()));
 			} // if key === null
 			self::$instances[$key] = $obj;
 		}
@@ -322,18 +310,18 @@ abstract class BaseCommandePeer {
 	 * methods in your stub classes -- you may need to explicitly remove objects
 	 * from the cache in order to prevent returning objects that no longer exist.
 	 *
-	 * @param      mixed $value A Commande object or a primary key value.
+	 * @param      mixed $value A LigneCommande object or a primary key value.
 	 */
 	public static function removeInstanceFromPool($value)
 	{
 		if (Propel::isInstancePoolingEnabled() && $value !== null) {
-			if (is_object($value) && $value instanceof Commande) {
-				$key = (string) $value->getId();
-			} elseif (is_scalar($value)) {
+			if (is_object($value) && $value instanceof LigneCommande) {
+				$key = serialize(array((string) $value->getCommandeId(), (string) $value->getArticleId()));
+			} elseif (is_array($value) && count($value) === 2) {
 				// assume we've been passed a primary key
-				$key = (string) $value;
+				$key = serialize(array((string) $value[0], (string) $value[1]));
 			} else {
-				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or Commande object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
+				$e = new PropelException("Invalid value passed to removeInstanceFromPool().  Expected primary key or LigneCommande object; got " . (is_object($value) ? get_class($value) . ' object.' : var_export($value,true)));
 				throw $e;
 			}
 
@@ -348,7 +336,7 @@ abstract class BaseCommandePeer {
 	 * a multi-column primary key, a serialize()d version of the primary key will be returned.
 	 *
 	 * @param      string $key The key (@see getPrimaryKeyHash()) for this instance.
-	 * @return     Commande Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
+	 * @return     LigneCommande Found object or NULL if 1) no instance exists for specified key or 2) instance pooling has been disabled.
 	 * @see        getPrimaryKeyHash()
 	 */
 	public static function getInstanceFromPool($key)
@@ -372,7 +360,7 @@ abstract class BaseCommandePeer {
 	}
 	
 	/**
-	 * Method to invalidate the instance pool of all tables related to commande
+	 * Method to invalidate the instance pool of all tables related to ligne_commande
 	 * by a foreign key with ON DELETE CASCADE
 	 */
 	public static function clearRelatedInstancePool()
@@ -392,10 +380,10 @@ abstract class BaseCommandePeer {
 	public static function getPrimaryKeyHashFromRow($row, $startcol = 0)
 	{
 		// If the PK cannot be derived from the row, return NULL.
-		if ($row[$startcol + 6] === null) {
+		if ($row[$startcol] === null && $row[$startcol + 1] === null) {
 			return null;
 		}
-		return (string) $row[$startcol + 6];
+		return serialize(array((string) $row[$startcol], (string) $row[$startcol + 1]));
 	}
 
 	/**
@@ -410,11 +398,11 @@ abstract class BaseCommandePeer {
 		$results = array();
 	
 		// set the class once to avoid overhead in the loop
-		$cls = CommandePeer::getOMClass(false);
+		$cls = LigneCommandePeer::getOMClass(false);
 		// populate the object(s)
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj = CommandePeer::getInstanceFromPool($key))) {
+			$key = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj = LigneCommandePeer::getInstanceFromPool($key))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj->hydrate($row, 0, true); // rehydrate
@@ -423,7 +411,7 @@ abstract class BaseCommandePeer {
 				$obj = new $cls();
 				$obj->hydrate($row);
 				$results[] = $obj;
-				CommandePeer::addInstanceToPool($obj, $key);
+				LigneCommandePeer::addInstanceToPool($obj, $key);
 			} // if key exists
 		}
 		$stmt->closeCursor();
@@ -431,7 +419,7 @@ abstract class BaseCommandePeer {
 	}
 
 	/**
-	 * Returns the number of rows matching criteria, joining the related Client table
+	 * Returns the number of rows matching criteria, joining the related Commande table
 	 *
 	 * @param      Criteria $criteria
 	 * @param      boolean $distinct Whether to select only distinct columns; deprecated: use Criteria->setDistinct() instead.
@@ -439,7 +427,7 @@ abstract class BaseCommandePeer {
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
 	 * @return     int Number of matching rows.
 	 */
-	public static function doCountJoinClient(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	public static function doCountJoinCommande(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
 	{
 		// we're going to modify criteria, so copy it first
 		$criteria = clone $criteria;
@@ -447,14 +435,14 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
@@ -463,15 +451,15 @@ abstract class BaseCommandePeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -503,14 +491,14 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
@@ -519,15 +507,15 @@ abstract class BaseCommandePeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -543,15 +531,15 @@ abstract class BaseCommandePeer {
 
 
 	/**
-	 * Selects a collection of Commande objects pre-filled with their Client objects.
+	 * Selects a collection of LigneCommande objects pre-filled with their Commande objects.
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of Commande objects.
+	 * @return     array Array of LigneCommande objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
-	public static function doSelectJoinClient(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	public static function doSelectJoinCommande(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
 	{
 		$criteria = clone $criteria;
 
@@ -560,50 +548,50 @@ abstract class BaseCommandePeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
+		LigneCommandePeer::addSelectColumns($criteria);
+		$startcol = (LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS);
 		CommandePeer::addSelectColumns($criteria);
-		$startcol = (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
-		ClientPeer::addSelectColumns($criteria);
 
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doSelect($criteria, $con);
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = CommandePeer::getInstanceFromPool($key1))) {
+			$key1 = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = LigneCommandePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
 
-				$cls = CommandePeer::getOMClass(false);
+				$cls = LigneCommandePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				CommandePeer::addInstanceToPool($obj1, $key1);
+				LigneCommandePeer::addInstanceToPool($obj1, $key1);
 			} // if $obj1 already loaded
 
-			$key2 = ClientPeer::getPrimaryKeyHashFromRow($row, $startcol);
+			$key2 = CommandePeer::getPrimaryKeyHashFromRow($row, $startcol);
 			if ($key2 !== null) {
-				$obj2 = ClientPeer::getInstanceFromPool($key2);
+				$obj2 = CommandePeer::getInstanceFromPool($key2);
 				if (!$obj2) {
 
-					$cls = ClientPeer::getOMClass(false);
+					$cls = CommandePeer::getOMClass(false);
 
 					$obj2 = new $cls();
 					$obj2->hydrate($row, $startcol);
-					ClientPeer::addInstanceToPool($obj2, $key2);
+					CommandePeer::addInstanceToPool($obj2, $key2);
 				} // if obj2 already loaded
 				
-				// Add the $obj1 (Commande) to $obj2 (Client)
-				$obj2->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to $obj2 (Commande)
+				$obj2->addLigneCommande($obj1);
 
 			} // if joined row was not null
 
@@ -615,11 +603,11 @@ abstract class BaseCommandePeer {
 
 
 	/**
-	 * Selects a collection of Commande objects pre-filled with their Article objects.
+	 * Selects a collection of LigneCommande objects pre-filled with their Article objects.
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of Commande objects.
+	 * @return     array Array of LigneCommande objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -632,34 +620,34 @@ abstract class BaseCommandePeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
-		CommandePeer::addSelectColumns($criteria);
-		$startcol = (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
+		LigneCommandePeer::addSelectColumns($criteria);
+		$startcol = (LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS);
 		ArticlePeer::addSelectColumns($criteria);
 
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doSelect($criteria, $con);
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = CommandePeer::getInstanceFromPool($key1))) {
+			$key1 = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = LigneCommandePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
 
-				$cls = CommandePeer::getOMClass(false);
+				$cls = LigneCommandePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				CommandePeer::addInstanceToPool($obj1, $key1);
+				LigneCommandePeer::addInstanceToPool($obj1, $key1);
 			} // if $obj1 already loaded
 
 			$key2 = ArticlePeer::getPrimaryKeyHashFromRow($row, $startcol);
@@ -674,8 +662,8 @@ abstract class BaseCommandePeer {
 					ArticlePeer::addInstanceToPool($obj2, $key2);
 				} // if obj2 already loaded
 				
-				// Add the $obj1 (Commande) to $obj2 (Article)
-				$obj2->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to $obj2 (Article)
+				$obj2->addLigneCommande($obj1);
 
 			} // if joined row was not null
 
@@ -703,14 +691,14 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY won't ever affect the count
@@ -719,17 +707,17 @@ abstract class BaseCommandePeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -744,12 +732,12 @@ abstract class BaseCommandePeer {
 	}
 
 	/**
-	 * Selects a collection of Commande objects pre-filled with all related objects.
+	 * Selects a collection of LigneCommande objects pre-filled with all related objects.
 	 *
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of Commande objects.
+	 * @return     array Array of LigneCommande objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -762,58 +750,58 @@ abstract class BaseCommandePeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
-		CommandePeer::addSelectColumns($criteria);
-		$startcol2 = (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
+		LigneCommandePeer::addSelectColumns($criteria);
+		$startcol2 = (LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS);
 
-		ClientPeer::addSelectColumns($criteria);
-		$startcol3 = $startcol2 + (ClientPeer::NUM_COLUMNS - ClientPeer::NUM_LAZY_LOAD_COLUMNS);
+		CommandePeer::addSelectColumns($criteria);
+		$startcol3 = $startcol2 + (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
 
 		ArticlePeer::addSelectColumns($criteria);
 		$startcol4 = $startcol3 + (ArticlePeer::NUM_COLUMNS - ArticlePeer::NUM_LAZY_LOAD_COLUMNS);
 
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doSelect($criteria, $con);
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = CommandePeer::getInstanceFromPool($key1))) {
+			$key1 = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = LigneCommandePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
-				$cls = CommandePeer::getOMClass(false);
+				$cls = LigneCommandePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				CommandePeer::addInstanceToPool($obj1, $key1);
+				LigneCommandePeer::addInstanceToPool($obj1, $key1);
 			} // if obj1 already loaded
 
-			// Add objects for joined Client rows
+			// Add objects for joined Commande rows
 
-			$key2 = ClientPeer::getPrimaryKeyHashFromRow($row, $startcol2);
+			$key2 = CommandePeer::getPrimaryKeyHashFromRow($row, $startcol2);
 			if ($key2 !== null) {
-				$obj2 = ClientPeer::getInstanceFromPool($key2);
+				$obj2 = CommandePeer::getInstanceFromPool($key2);
 				if (!$obj2) {
 
-					$cls = ClientPeer::getOMClass(false);
+					$cls = CommandePeer::getOMClass(false);
 
 					$obj2 = new $cls();
 					$obj2->hydrate($row, $startcol2);
-					ClientPeer::addInstanceToPool($obj2, $key2);
+					CommandePeer::addInstanceToPool($obj2, $key2);
 				} // if obj2 loaded
 
-				// Add the $obj1 (Commande) to the collection in $obj2 (Client)
-				$obj2->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to the collection in $obj2 (Commande)
+				$obj2->addLigneCommande($obj1);
 			} // if joined row not null
 
 			// Add objects for joined Article rows
@@ -830,8 +818,8 @@ abstract class BaseCommandePeer {
 					ArticlePeer::addInstanceToPool($obj3, $key3);
 				} // if obj3 loaded
 
-				// Add the $obj1 (Commande) to the collection in $obj3 (Article)
-				$obj3->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to the collection in $obj3 (Article)
+				$obj3->addLigneCommande($obj1);
 			} // if joined row not null
 
 			$results[] = $obj1;
@@ -842,7 +830,7 @@ abstract class BaseCommandePeer {
 
 
 	/**
-	 * Returns the number of rows matching criteria, joining the related Client table
+	 * Returns the number of rows matching criteria, joining the related Commande table
 	 *
 	 * @param      Criteria $criteria
 	 * @param      boolean $distinct Whether to select only distinct columns; deprecated: use Criteria->setDistinct() instead.
@@ -850,7 +838,7 @@ abstract class BaseCommandePeer {
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
 	 * @return     int Number of matching rows.
 	 */
-	public static function doCountJoinAllExceptClient(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	public static function doCountJoinAllExceptCommande(Criteria $criteria, $distinct = false, PropelPDO $con = null, $join_behavior = Criteria::LEFT_JOIN)
 	{
 		// we're going to modify criteria, so copy it first
 		$criteria = clone $criteria;
@@ -858,14 +846,14 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 		
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY should not affect count
@@ -874,15 +862,15 @@ abstract class BaseCommandePeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 	
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -914,14 +902,14 @@ abstract class BaseCommandePeer {
 		// We need to set the primary table name, since in the case that there are no WHERE columns
 		// it will be impossible for the BasePeer::createSelectSql() method to determine which
 		// tables go into the FROM clause.
-		$criteria->setPrimaryTableName(CommandePeer::TABLE_NAME);
+		$criteria->setPrimaryTableName(LigneCommandePeer::TABLE_NAME);
 		
 		if ($distinct && !in_array(Criteria::DISTINCT, $criteria->getSelectModifiers())) {
 			$criteria->setDistinct();
 		}
 
 		if (!$criteria->hasSelectClause()) {
-			CommandePeer::addSelectColumns($criteria);
+			LigneCommandePeer::addSelectColumns($criteria);
 		}
 		
 		$criteria->clearOrderByColumns(); // ORDER BY should not affect count
@@ -930,15 +918,15 @@ abstract class BaseCommandePeer {
 		$criteria->setDbName(self::DATABASE_NAME);
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 	
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 		$stmt = BasePeer::doCount($criteria, $con);
@@ -954,16 +942,16 @@ abstract class BaseCommandePeer {
 
 
 	/**
-	 * Selects a collection of Commande objects pre-filled with all related objects except Client.
+	 * Selects a collection of LigneCommande objects pre-filled with all related objects except Commande.
 	 *
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of Commande objects.
+	 * @return     array Array of LigneCommande objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
-	public static function doSelectJoinAllExceptClient(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
+	public static function doSelectJoinAllExceptCommande(Criteria $criteria, $con = null, $join_behavior = Criteria::LEFT_JOIN)
 	{
 		$criteria = clone $criteria;
 
@@ -974,18 +962,18 @@ abstract class BaseCommandePeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
-		CommandePeer::addSelectColumns($criteria);
-		$startcol2 = (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
+		LigneCommandePeer::addSelectColumns($criteria);
+		$startcol2 = (LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS);
 
 		ArticlePeer::addSelectColumns($criteria);
 		$startcol3 = $startcol2 + (ArticlePeer::NUM_COLUMNS - ArticlePeer::NUM_LAZY_LOAD_COLUMNS);
 
-		$criteria->addJoin(CommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::ARTICLE_ID, ArticlePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 
@@ -993,17 +981,17 @@ abstract class BaseCommandePeer {
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = CommandePeer::getInstanceFromPool($key1))) {
+			$key1 = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = LigneCommandePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
-				$cls = CommandePeer::getOMClass(false);
+				$cls = LigneCommandePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				CommandePeer::addInstanceToPool($obj1, $key1);
+				LigneCommandePeer::addInstanceToPool($obj1, $key1);
 			} // if obj1 already loaded
 
 				// Add objects for joined Article rows
@@ -1020,8 +1008,8 @@ abstract class BaseCommandePeer {
 					ArticlePeer::addInstanceToPool($obj2, $key2);
 				} // if $obj2 already loaded
 
-				// Add the $obj1 (Commande) to the collection in $obj2 (Article)
-				$obj2->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to the collection in $obj2 (Article)
+				$obj2->addLigneCommande($obj1);
 
 			} // if joined row is not null
 
@@ -1033,12 +1021,12 @@ abstract class BaseCommandePeer {
 
 
 	/**
-	 * Selects a collection of Commande objects pre-filled with all related objects except Article.
+	 * Selects a collection of LigneCommande objects pre-filled with all related objects except Article.
 	 *
 	 * @param      Criteria  $criteria
 	 * @param      PropelPDO $con
 	 * @param      String    $join_behavior the type of joins to use, defaults to Criteria::LEFT_JOIN
-	 * @return     array Array of Commande objects.
+	 * @return     array Array of LigneCommande objects.
 	 * @throws     PropelException Any exceptions caught during processing will be
 	 *		 rethrown wrapped into a PropelException.
 	 */
@@ -1053,18 +1041,18 @@ abstract class BaseCommandePeer {
 			$criteria->setDbName(self::DATABASE_NAME);
 		}
 
+		LigneCommandePeer::addSelectColumns($criteria);
+		$startcol2 = (LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS);
+
 		CommandePeer::addSelectColumns($criteria);
-		$startcol2 = (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
+		$startcol3 = $startcol2 + (CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS);
 
-		ClientPeer::addSelectColumns($criteria);
-		$startcol3 = $startcol2 + (ClientPeer::NUM_COLUMNS - ClientPeer::NUM_LAZY_LOAD_COLUMNS);
-
-		$criteria->addJoin(CommandePeer::CLIENT_ID, ClientPeer::ID, $join_behavior);
+		$criteria->addJoin(LigneCommandePeer::COMMANDE_ID, CommandePeer::ID, $join_behavior);
 
 		// symfony_behaviors behavior
 		foreach (sfMixer::getCallables(self::getMixerPreSelectHook(__FUNCTION__)) as $sf_hook)
 		{
-		  call_user_func($sf_hook, 'BaseCommandePeer', $criteria, $con);
+		  call_user_func($sf_hook, 'BaseLigneCommandePeer', $criteria, $con);
 		}
 
 
@@ -1072,35 +1060,35 @@ abstract class BaseCommandePeer {
 		$results = array();
 
 		while ($row = $stmt->fetch(PDO::FETCH_NUM)) {
-			$key1 = CommandePeer::getPrimaryKeyHashFromRow($row, 0);
-			if (null !== ($obj1 = CommandePeer::getInstanceFromPool($key1))) {
+			$key1 = LigneCommandePeer::getPrimaryKeyHashFromRow($row, 0);
+			if (null !== ($obj1 = LigneCommandePeer::getInstanceFromPool($key1))) {
 				// We no longer rehydrate the object, since this can cause data loss.
 				// See http://propel.phpdb.org/trac/ticket/509
 				// $obj1->hydrate($row, 0, true); // rehydrate
 			} else {
-				$cls = CommandePeer::getOMClass(false);
+				$cls = LigneCommandePeer::getOMClass(false);
 
 				$obj1 = new $cls();
 				$obj1->hydrate($row);
-				CommandePeer::addInstanceToPool($obj1, $key1);
+				LigneCommandePeer::addInstanceToPool($obj1, $key1);
 			} // if obj1 already loaded
 
-				// Add objects for joined Client rows
+				// Add objects for joined Commande rows
 
-				$key2 = ClientPeer::getPrimaryKeyHashFromRow($row, $startcol2);
+				$key2 = CommandePeer::getPrimaryKeyHashFromRow($row, $startcol2);
 				if ($key2 !== null) {
-					$obj2 = ClientPeer::getInstanceFromPool($key2);
+					$obj2 = CommandePeer::getInstanceFromPool($key2);
 					if (!$obj2) {
 	
-						$cls = ClientPeer::getOMClass(false);
+						$cls = CommandePeer::getOMClass(false);
 
 					$obj2 = new $cls();
 					$obj2->hydrate($row, $startcol2);
-					ClientPeer::addInstanceToPool($obj2, $key2);
+					CommandePeer::addInstanceToPool($obj2, $key2);
 				} // if $obj2 already loaded
 
-				// Add the $obj1 (Commande) to the collection in $obj2 (Client)
-				$obj2->addCommande($obj1);
+				// Add the $obj1 (LigneCommande) to the collection in $obj2 (Commande)
+				$obj2->addLigneCommande($obj1);
 
 			} // if joined row is not null
 
@@ -1127,10 +1115,10 @@ abstract class BaseCommandePeer {
 	 */
 	public static function buildTableMap()
 	{
-	  $dbMap = Propel::getDatabaseMap(BaseCommandePeer::DATABASE_NAME);
-	  if (!$dbMap->hasTable(BaseCommandePeer::TABLE_NAME))
+	  $dbMap = Propel::getDatabaseMap(BaseLigneCommandePeer::DATABASE_NAME);
+	  if (!$dbMap->hasTable(BaseLigneCommandePeer::TABLE_NAME))
 	  {
-	    $dbMap->addTableObject(new CommandeTableMap());
+	    $dbMap->addTableObject(new LigneCommandeTableMap());
 	  }
 	}
 
@@ -1147,13 +1135,13 @@ abstract class BaseCommandePeer {
 	 */
 	public static function getOMClass($withPrefix = true)
 	{
-		return $withPrefix ? CommandePeer::CLASS_DEFAULT : CommandePeer::OM_CLASS;
+		return $withPrefix ? LigneCommandePeer::CLASS_DEFAULT : LigneCommandePeer::OM_CLASS;
 	}
 
 	/**
-	 * Method perform an INSERT on the database, given a Commande or Criteria object.
+	 * Method perform an INSERT on the database, given a LigneCommande or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or Commande object containing data that is used to create the INSERT statement.
+	 * @param      mixed $values Criteria or LigneCommande object containing data that is used to create the INSERT statement.
 	 * @param      PropelPDO $con the PropelPDO connection to use
 	 * @return     mixed The new primary key.
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -1162,26 +1150,22 @@ abstract class BaseCommandePeer {
 	public static function doInsert($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCommandePeer:doInsert:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseLigneCommandePeer:doInsert:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCommandePeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseLigneCommandePeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 		} else {
-			$criteria = $values->buildCriteria(); // build Criteria from Commande object
-		}
-
-		if ($criteria->containsKey(CommandePeer::ID) && $criteria->keyContainsValue(CommandePeer::ID) ) {
-			throw new PropelException('Cannot insert a value for auto-increment primary key ('.CommandePeer::ID.')');
+			$criteria = $values->buildCriteria(); // build Criteria from LigneCommande object
 		}
 
 
@@ -1200,18 +1184,18 @@ abstract class BaseCommandePeer {
 		}
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCommandePeer:doInsert:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseLigneCommandePeer:doInsert:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseCommandePeer', $values, $con, $pk);
+      call_user_func($sf_hook, 'BaseLigneCommandePeer', $values, $con, $pk);
     }
 
 		return $pk;
 	}
 
 	/**
-	 * Method perform an UPDATE on the database, given a Commande or Criteria object.
+	 * Method perform an UPDATE on the database, given a LigneCommande or Criteria object.
 	 *
-	 * @param      mixed $values Criteria or Commande object containing data that is used to create the UPDATE statement.
+	 * @param      mixed $values Criteria or LigneCommande object containing data that is used to create the UPDATE statement.
 	 * @param      PropelPDO $con The connection to use (specify PropelPDO connection object to exert more control over transactions).
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 * @throws     PropelException Any exceptions caught during processing will be
@@ -1220,16 +1204,16 @@ abstract class BaseCommandePeer {
 	public static function doUpdate($values, PropelPDO $con = null)
 	{
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCommandePeer:doUpdate:pre') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseLigneCommandePeer:doUpdate:pre') as $sf_hook)
     {
-      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseCommandePeer', $values, $con))
+      if (false !== $sf_hook_retval = call_user_func($sf_hook, 'BaseLigneCommandePeer', $values, $con))
       {
         return $sf_hook_retval;
       }
     }
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		$selectCriteria = new Criteria(self::DATABASE_NAME);
@@ -1237,10 +1221,13 @@ abstract class BaseCommandePeer {
 		if ($values instanceof Criteria) {
 			$criteria = clone $values; // rename for clarity
 
-			$comparison = $criteria->getComparison(CommandePeer::ID);
-			$selectCriteria->add(CommandePeer::ID, $criteria->remove(CommandePeer::ID), $comparison);
+			$comparison = $criteria->getComparison(LigneCommandePeer::COMMANDE_ID);
+			$selectCriteria->add(LigneCommandePeer::COMMANDE_ID, $criteria->remove(LigneCommandePeer::COMMANDE_ID), $comparison);
 
-		} else { // $values is Commande object
+			$comparison = $criteria->getComparison(LigneCommandePeer::ARTICLE_ID);
+			$selectCriteria->add(LigneCommandePeer::ARTICLE_ID, $criteria->remove(LigneCommandePeer::ARTICLE_ID), $comparison);
+
+		} else { // $values is LigneCommande object
 			$criteria = $values->buildCriteria(); // gets full criteria
 			$selectCriteria = $values->buildPkeyCriteria(); // gets criteria w/ primary key(s)
 		}
@@ -1251,35 +1238,35 @@ abstract class BaseCommandePeer {
 		$ret = BasePeer::doUpdate($selectCriteria, $criteria, $con);
 
     // symfony_behaviors behavior
-    foreach (sfMixer::getCallables('BaseCommandePeer:doUpdate:post') as $sf_hook)
+    foreach (sfMixer::getCallables('BaseLigneCommandePeer:doUpdate:post') as $sf_hook)
     {
-      call_user_func($sf_hook, 'BaseCommandePeer', $values, $con, $ret);
+      call_user_func($sf_hook, 'BaseLigneCommandePeer', $values, $con, $ret);
     }
 
     return $ret;
 	}
 
 	/**
-	 * Method to DELETE all rows from the commande table.
+	 * Method to DELETE all rows from the ligne_commande table.
 	 *
 	 * @return     int The number of affected rows (if supported by underlying database driver).
 	 */
 	public static function doDeleteAll($con = null)
 	{
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		$affectedRows = 0; // initialize var to track total num of affected rows
 		try {
 			// use transaction because $criteria could contain info
 			// for more than one table or we could emulating ON DELETE CASCADE, etc.
 			$con->beginTransaction();
-			$affectedRows += BasePeer::doDeleteAll(CommandePeer::TABLE_NAME, $con);
+			$affectedRows += BasePeer::doDeleteAll(LigneCommandePeer::TABLE_NAME, $con);
 			// Because this db requires some delete cascade/set null emulation, we have to
 			// clear the cached instance *after* the emulation has happened (since
 			// instances get re-added by the select statement contained therein).
-			CommandePeer::clearInstancePool();
-			CommandePeer::clearRelatedInstancePool();
+			LigneCommandePeer::clearInstancePool();
+			LigneCommandePeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -1289,9 +1276,9 @@ abstract class BaseCommandePeer {
 	}
 
 	/**
-	 * Method perform a DELETE on the database, given a Commande or Criteria object OR a primary key value.
+	 * Method perform a DELETE on the database, given a LigneCommande or Criteria object OR a primary key value.
 	 *
-	 * @param      mixed $values Criteria or Commande object or primary key or array of primary keys
+	 * @param      mixed $values Criteria or LigneCommande object or primary key or array of primary keys
 	 *              which is used to create the DELETE statement
 	 * @param      PropelPDO $con the connection to use
 	 * @return     int 	The number of affected rows (if supported by underlying database driver).  This includes CASCADE-related rows
@@ -1302,27 +1289,35 @@ abstract class BaseCommandePeer {
 	 public static function doDelete($values, PropelPDO $con = null)
 	 {
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 
 		if ($values instanceof Criteria) {
 			// invalidate the cache for all objects of this type, since we have no
 			// way of knowing (without running a query) what objects should be invalidated
 			// from the cache based on this Criteria.
-			CommandePeer::clearInstancePool();
+			LigneCommandePeer::clearInstancePool();
 			// rename for clarity
 			$criteria = clone $values;
-		} elseif ($values instanceof Commande) { // it's a model object
+		} elseif ($values instanceof LigneCommande) { // it's a model object
 			// invalidate the cache for this single object
-			CommandePeer::removeInstanceFromPool($values);
+			LigneCommandePeer::removeInstanceFromPool($values);
 			// create criteria based on pk values
 			$criteria = $values->buildPkeyCriteria();
 		} else { // it's a primary key, or an array of pks
 			$criteria = new Criteria(self::DATABASE_NAME);
-			$criteria->add(CommandePeer::ID, (array) $values, Criteria::IN);
-			// invalidate the cache for this object(s)
-			foreach ((array) $values as $singleval) {
-				CommandePeer::removeInstanceFromPool($singleval);
+			// primary key is composite; we therefore, expect
+			// the primary key passed to be an array of pkey values
+			if (count($values) == count($values, COUNT_RECURSIVE)) {
+				// array is not multi-dimensional
+				$values = array($values);
+			}
+			foreach ($values as $value) {
+				$criterion = $criteria->getNewCriterion(LigneCommandePeer::COMMANDE_ID, $value[0]);
+				$criterion->addAnd($criteria->getNewCriterion(LigneCommandePeer::ARTICLE_ID, $value[1]));
+				$criteria->addOr($criterion);
+				// we can invalidate the cache for this single PK
+				LigneCommandePeer::removeInstanceFromPool($value);
 			}
 		}
 
@@ -1337,7 +1332,7 @@ abstract class BaseCommandePeer {
 			$con->beginTransaction();
 			
 			$affectedRows += BasePeer::doDelete($criteria, $con);
-			CommandePeer::clearRelatedInstancePool();
+			LigneCommandePeer::clearRelatedInstancePool();
 			$con->commit();
 			return $affectedRows;
 		} catch (PropelException $e) {
@@ -1347,24 +1342,24 @@ abstract class BaseCommandePeer {
 	}
 
 	/**
-	 * Validates all modified columns of given Commande object.
+	 * Validates all modified columns of given LigneCommande object.
 	 * If parameter $columns is either a single column name or an array of column names
 	 * than only those columns are validated.
 	 *
 	 * NOTICE: This does not apply to primary or foreign keys for now.
 	 *
-	 * @param      Commande $obj The object to validate.
+	 * @param      LigneCommande $obj The object to validate.
 	 * @param      mixed $cols Column name or array of column names.
 	 *
 	 * @return     mixed TRUE if all columns are valid or the error message of the first invalid column.
 	 */
-	public static function doValidate(Commande $obj, $cols = null)
+	public static function doValidate(LigneCommande $obj, $cols = null)
 	{
 		$columns = array();
 
 		if ($cols) {
-			$dbMap = Propel::getDatabaseMap(CommandePeer::DATABASE_NAME);
-			$tableMap = $dbMap->getTable(CommandePeer::TABLE_NAME);
+			$dbMap = Propel::getDatabaseMap(LigneCommandePeer::DATABASE_NAME);
+			$tableMap = $dbMap->getTable(LigneCommandePeer::TABLE_NAME);
 
 			if (! is_array($cols)) {
 				$cols = array($cols);
@@ -1380,60 +1375,32 @@ abstract class BaseCommandePeer {
 
 		}
 
-		return BasePeer::doValidate(CommandePeer::DATABASE_NAME, CommandePeer::TABLE_NAME, $columns);
+		return BasePeer::doValidate(LigneCommandePeer::DATABASE_NAME, LigneCommandePeer::TABLE_NAME, $columns);
 	}
 
 	/**
-	 * Retrieve a single object by pkey.
-	 *
-	 * @param      int $pk the primary key.
-	 * @param      PropelPDO $con the connection to use
-	 * @return     Commande
+	 * Retrieve object using using composite pkey values.
+	 * @param      int $commande_id
+	 * @param      int $article_id
+	 * @param      PropelPDO $con
+	 * @return     LigneCommande
 	 */
-	public static function retrieveByPK($pk, PropelPDO $con = null)
-	{
-
-		if (null !== ($obj = CommandePeer::getInstanceFromPool((string) $pk))) {
-			return $obj;
+	public static function retrieveByPK($commande_id, $article_id, PropelPDO $con = null) {
+		$key = serialize(array((string) $commande_id, (string) $article_id));
+ 		if (null !== ($obj = LigneCommandePeer::getInstanceFromPool($key))) {
+ 			return $obj;
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
+		$criteria = new Criteria(LigneCommandePeer::DATABASE_NAME);
+		$criteria->add(LigneCommandePeer::COMMANDE_ID, $commande_id);
+		$criteria->add(LigneCommandePeer::ARTICLE_ID, $article_id);
+		$v = LigneCommandePeer::doSelect($criteria, $con);
 
-		$criteria = new Criteria(CommandePeer::DATABASE_NAME);
-		$criteria->add(CommandePeer::ID, $pk);
-
-		$v = CommandePeer::doSelect($criteria, $con);
-
-		return !empty($v) > 0 ? $v[0] : null;
+		return !empty($v) ? $v[0] : null;
 	}
-
-	/**
-	 * Retrieve multiple objects by pkey.
-	 *
-	 * @param      array $pks List of primary keys
-	 * @param      PropelPDO $con the connection to use
-	 * @throws     PropelException Any exceptions caught during processing will be
-	 *		 rethrown wrapped into a PropelException.
-	 */
-	public static function retrieveByPKs($pks, PropelPDO $con = null)
-	{
-		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
-		}
-
-		$objs = null;
-		if (empty($pks)) {
-			$objs = array();
-		} else {
-			$criteria = new Criteria(CommandePeer::DATABASE_NAME);
-			$criteria->add(CommandePeer::ID, $pks, Criteria::IN);
-			$objs = CommandePeer::doSelect($criteria, $con);
-		}
-		return $objs;
-	}
-
 	// symfony behavior
 	
 	/**
@@ -1461,15 +1428,15 @@ abstract class BaseCommandePeer {
 	{
 	  if (preg_match('/^do(Select|Count)(Join(All(Except)?)?|Stmt)?/', $method, $match))
 	  {
-	    return sprintf('BaseCommandePeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
+	    return sprintf('BaseLigneCommandePeer:%s:%1$s', 'Count' == $match[1] ? 'doCount' : $match[0]);
 	  }
 	
 	  throw new LogicException(sprintf('Unrecognized function "%s"', $method));
 	}
 
-} // BaseCommandePeer
+} // BaseLigneCommandePeer
 
 // This is the static code needed to register the TableMap for this table with the main Propel class.
 //
-BaseCommandePeer::buildTableMap();
+BaseLigneCommandePeer::buildTableMap();
 

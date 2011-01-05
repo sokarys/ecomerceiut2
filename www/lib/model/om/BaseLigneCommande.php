@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base class that represents a row from the 'commande' table.
+ * Base class that represents a row from the 'ligne_commande' table.
  *
  * 
  *
@@ -11,22 +11,22 @@
  *
  * @package    lib.model.om
  */
-abstract class BaseCommande extends BaseObject  implements Persistent {
+abstract class BaseLigneCommande extends BaseObject  implements Persistent {
 
 
 	/**
 	 * The Peer class.
 	 * Instance provides a convenient way of calling static methods on a class
 	 * that calling code may not be able to identify.
-	 * @var        CommandePeer
+	 * @var        LigneCommandePeer
 	 */
 	protected static $peer;
 
 	/**
-	 * The value for the client_id field.
+	 * The value for the commande_id field.
 	 * @var        int
 	 */
-	protected $client_id;
+	protected $commande_id;
 
 	/**
 	 * The value for the article_id field.
@@ -47,43 +47,14 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	protected $prix;
 
 	/**
-	 * The value for the created_at field.
-	 * @var        string
+	 * @var        Commande
 	 */
-	protected $created_at;
-
-	/**
-	 * The value for the etat field.
-	 * Note: this column has a database default value of: 'attente'
-	 * @var        string
-	 */
-	protected $etat;
-
-	/**
-	 * The value for the id field.
-	 * @var        int
-	 */
-	protected $id;
-
-	/**
-	 * @var        Client
-	 */
-	protected $aClient;
+	protected $aCommande;
 
 	/**
 	 * @var        Article
 	 */
 	protected $aArticle;
-
-	/**
-	 * @var        array LigneCommande[] Collection to store aggregation of LigneCommande objects.
-	 */
-	protected $collLigneCommandes;
-
-	/**
-	 * @var        Criteria The criteria used to select the current contents of collLigneCommandes.
-	 */
-	private $lastLigneCommandeCriteria = null;
 
 	/**
 	 * Flag to prevent endless save loop, if this object is referenced
@@ -101,37 +72,16 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 	// symfony behavior
 	
-	const PEER = 'CommandePeer';
+	const PEER = 'LigneCommandePeer';
 
 	/**
-	 * Applies default values to this object.
-	 * This method should be called from the object's constructor (or
-	 * equivalent initialization method).
-	 * @see        __construct()
-	 */
-	public function applyDefaultValues()
-	{
-		$this->etat = 'attente';
-	}
-
-	/**
-	 * Initializes internal state of BaseCommande object.
-	 * @see        applyDefaults()
-	 */
-	public function __construct()
-	{
-		parent::__construct();
-		$this->applyDefaultValues();
-	}
-
-	/**
-	 * Get the [client_id] column value.
+	 * Get the [commande_id] column value.
 	 * 
 	 * @return     int
 	 */
-	public function getClientId()
+	public function getCommandeId()
 	{
-		return $this->client_id;
+		return $this->commande_id;
 	}
 
 	/**
@@ -165,92 +115,34 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	}
 
 	/**
-	 * Get the [optionally formatted] temporal [created_at] column value.
-	 * 
-	 *
-	 * @param      string $format The date/time format string (either date()-style or strftime()-style).
-	 *							If format is NULL, then the raw DateTime object will be returned.
-	 * @return     mixed Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00
-	 * @throws     PropelException - if unable to parse/validate the date/time value.
-	 */
-	public function getCreatedAt($format = 'Y-m-d H:i:s')
-	{
-		if ($this->created_at === null) {
-			return null;
-		}
-
-
-		if ($this->created_at === '0000-00-00 00:00:00') {
-			// while technically this is not a default value of NULL,
-			// this seems to be closest in meaning.
-			return null;
-		} else {
-			try {
-				$dt = new DateTime($this->created_at);
-			} catch (Exception $x) {
-				throw new PropelException("Internally stored date/time/timestamp value could not be converted to DateTime: " . var_export($this->created_at, true), $x);
-			}
-		}
-
-		if ($format === null) {
-			// Because propel.useDateTimeClass is TRUE, we return a DateTime object.
-			return $dt;
-		} elseif (strpos($format, '%') !== false) {
-			return strftime($format, $dt->format('U'));
-		} else {
-			return $dt->format($format);
-		}
-	}
-
-	/**
-	 * Get the [etat] column value.
-	 * 
-	 * @return     string
-	 */
-	public function getEtat()
-	{
-		return $this->etat;
-	}
-
-	/**
-	 * Get the [id] column value.
-	 * 
-	 * @return     int
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	/**
-	 * Set the value of [client_id] column.
+	 * Set the value of [commande_id] column.
 	 * 
 	 * @param      int $v new value
-	 * @return     Commande The current object (for fluent API support)
+	 * @return     LigneCommande The current object (for fluent API support)
 	 */
-	public function setClientId($v)
+	public function setCommandeId($v)
 	{
 		if ($v !== null) {
 			$v = (int) $v;
 		}
 
-		if ($this->client_id !== $v) {
-			$this->client_id = $v;
-			$this->modifiedColumns[] = CommandePeer::CLIENT_ID;
+		if ($this->commande_id !== $v) {
+			$this->commande_id = $v;
+			$this->modifiedColumns[] = LigneCommandePeer::COMMANDE_ID;
 		}
 
-		if ($this->aClient !== null && $this->aClient->getId() !== $v) {
-			$this->aClient = null;
+		if ($this->aCommande !== null && $this->aCommande->getId() !== $v) {
+			$this->aCommande = null;
 		}
 
 		return $this;
-	} // setClientId()
+	} // setCommandeId()
 
 	/**
 	 * Set the value of [article_id] column.
 	 * 
 	 * @param      int $v new value
-	 * @return     Commande The current object (for fluent API support)
+	 * @return     LigneCommande The current object (for fluent API support)
 	 */
 	public function setArticleId($v)
 	{
@@ -260,7 +152,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 		if ($this->article_id !== $v) {
 			$this->article_id = $v;
-			$this->modifiedColumns[] = CommandePeer::ARTICLE_ID;
+			$this->modifiedColumns[] = LigneCommandePeer::ARTICLE_ID;
 		}
 
 		if ($this->aArticle !== null && $this->aArticle->getId() !== $v) {
@@ -274,7 +166,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 * Set the value of [quantite] column.
 	 * 
 	 * @param      int $v new value
-	 * @return     Commande The current object (for fluent API support)
+	 * @return     LigneCommande The current object (for fluent API support)
 	 */
 	public function setQuantite($v)
 	{
@@ -284,7 +176,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 		if ($this->quantite !== $v) {
 			$this->quantite = $v;
-			$this->modifiedColumns[] = CommandePeer::QUANTITE;
+			$this->modifiedColumns[] = LigneCommandePeer::QUANTITE;
 		}
 
 		return $this;
@@ -294,7 +186,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 * Set the value of [prix] column.
 	 * 
 	 * @param      double $v new value
-	 * @return     Commande The current object (for fluent API support)
+	 * @return     LigneCommande The current object (for fluent API support)
 	 */
 	public function setPrix($v)
 	{
@@ -304,100 +196,11 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 		if ($this->prix !== $v) {
 			$this->prix = $v;
-			$this->modifiedColumns[] = CommandePeer::PRIX;
+			$this->modifiedColumns[] = LigneCommandePeer::PRIX;
 		}
 
 		return $this;
 	} // setPrix()
-
-	/**
-	 * Sets the value of [created_at] column to a normalized version of the date/time value specified.
-	 * 
-	 * @param      mixed $v string, integer (timestamp), or DateTime value.  Empty string will
-	 *						be treated as NULL for temporal objects.
-	 * @return     Commande The current object (for fluent API support)
-	 */
-	public function setCreatedAt($v)
-	{
-		// we treat '' as NULL for temporal objects because DateTime('') == DateTime('now')
-		// -- which is unexpected, to say the least.
-		if ($v === null || $v === '') {
-			$dt = null;
-		} elseif ($v instanceof DateTime) {
-			$dt = $v;
-		} else {
-			// some string/numeric value passed; we normalize that so that we can
-			// validate it.
-			try {
-				if (is_numeric($v)) { // if it's a unix timestamp
-					$dt = new DateTime('@'.$v, new DateTimeZone('UTC'));
-					// We have to explicitly specify and then change the time zone because of a
-					// DateTime bug: http://bugs.php.net/bug.php?id=43003
-					$dt->setTimeZone(new DateTimeZone(date_default_timezone_get()));
-				} else {
-					$dt = new DateTime($v);
-				}
-			} catch (Exception $x) {
-				throw new PropelException('Error parsing date/time value: ' . var_export($v, true), $x);
-			}
-		}
-
-		if ( $this->created_at !== null || $dt !== null ) {
-			// (nested ifs are a little easier to read in this case)
-
-			$currNorm = ($this->created_at !== null && $tmpDt = new DateTime($this->created_at)) ? $tmpDt->format('Y-m-d H:i:s') : null;
-			$newNorm = ($dt !== null) ? $dt->format('Y-m-d H:i:s') : null;
-
-			if ( ($currNorm !== $newNorm) // normalized values don't match 
-					)
-			{
-				$this->created_at = ($dt ? $dt->format('Y-m-d H:i:s') : null);
-				$this->modifiedColumns[] = CommandePeer::CREATED_AT;
-			}
-		} // if either are not null
-
-		return $this;
-	} // setCreatedAt()
-
-	/**
-	 * Set the value of [etat] column.
-	 * 
-	 * @param      string $v new value
-	 * @return     Commande The current object (for fluent API support)
-	 */
-	public function setEtat($v)
-	{
-		if ($v !== null) {
-			$v = (string) $v;
-		}
-
-		if ($this->etat !== $v || $this->isNew()) {
-			$this->etat = $v;
-			$this->modifiedColumns[] = CommandePeer::ETAT;
-		}
-
-		return $this;
-	} // setEtat()
-
-	/**
-	 * Set the value of [id] column.
-	 * 
-	 * @param      int $v new value
-	 * @return     Commande The current object (for fluent API support)
-	 */
-	public function setId($v)
-	{
-		if ($v !== null) {
-			$v = (int) $v;
-		}
-
-		if ($this->id !== $v) {
-			$this->id = $v;
-			$this->modifiedColumns[] = CommandePeer::ID;
-		}
-
-		return $this;
-	} // setId()
 
 	/**
 	 * Indicates whether the columns in this object are only set to default values.
@@ -409,10 +212,6 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function hasOnlyDefaultValues()
 	{
-			if ($this->etat !== 'attente') {
-				return false;
-			}
-
 		// otherwise, everything was equal, so return TRUE
 		return true;
 	} // hasOnlyDefaultValues()
@@ -435,13 +234,10 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	{
 		try {
 
-			$this->client_id = ($row[$startcol + 0] !== null) ? (int) $row[$startcol + 0] : null;
+			$this->commande_id = ($row[$startcol + 0] !== null) ? (int) $row[$startcol + 0] : null;
 			$this->article_id = ($row[$startcol + 1] !== null) ? (int) $row[$startcol + 1] : null;
 			$this->quantite = ($row[$startcol + 2] !== null) ? (int) $row[$startcol + 2] : null;
 			$this->prix = ($row[$startcol + 3] !== null) ? (double) $row[$startcol + 3] : null;
-			$this->created_at = ($row[$startcol + 4] !== null) ? (string) $row[$startcol + 4] : null;
-			$this->etat = ($row[$startcol + 5] !== null) ? (string) $row[$startcol + 5] : null;
-			$this->id = ($row[$startcol + 6] !== null) ? (int) $row[$startcol + 6] : null;
 			$this->resetModified();
 
 			$this->setNew(false);
@@ -451,10 +247,10 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			}
 
 			// FIXME - using NUM_COLUMNS may be clearer.
-			return $startcol + 7; // 7 = CommandePeer::NUM_COLUMNS - CommandePeer::NUM_LAZY_LOAD_COLUMNS).
+			return $startcol + 4; // 4 = LigneCommandePeer::NUM_COLUMNS - LigneCommandePeer::NUM_LAZY_LOAD_COLUMNS).
 
 		} catch (Exception $e) {
-			throw new PropelException("Error populating Commande object", $e);
+			throw new PropelException("Error populating LigneCommande object", $e);
 		}
 	}
 
@@ -474,8 +270,8 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	public function ensureConsistency()
 	{
 
-		if ($this->aClient !== null && $this->client_id !== $this->aClient->getId()) {
-			$this->aClient = null;
+		if ($this->aCommande !== null && $this->commande_id !== $this->aCommande->getId()) {
+			$this->aCommande = null;
 		}
 		if ($this->aArticle !== null && $this->article_id !== $this->aArticle->getId()) {
 			$this->aArticle = null;
@@ -503,13 +299,13 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		// We don't need to alter the object instance pool; we're just modifying this instance
 		// already in the pool.
 
-		$stmt = CommandePeer::doSelectStmt($this->buildPkeyCriteria(), $con);
+		$stmt = LigneCommandePeer::doSelectStmt($this->buildPkeyCriteria(), $con);
 		$row = $stmt->fetch(PDO::FETCH_NUM);
 		$stmt->closeCursor();
 		if (!$row) {
@@ -519,11 +315,8 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 		if ($deep) {  // also de-associate any related objects?
 
-			$this->aClient = null;
+			$this->aCommande = null;
 			$this->aArticle = null;
-			$this->collLigneCommandes = null;
-			$this->lastLigneCommandeCriteria = null;
-
 		} // if (deep)
 	}
 
@@ -543,14 +336,14 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		
 		$con->beginTransaction();
 		try {
 			$ret = $this->preDelete($con);
 			// symfony_behaviors behavior
-			foreach (sfMixer::getCallables('BaseCommande:delete:pre') as $callable)
+			foreach (sfMixer::getCallables('BaseLigneCommande:delete:pre') as $callable)
 			{
 			  if (call_user_func($callable, $this, $con))
 			  {
@@ -561,10 +354,10 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			}
 
 			if ($ret) {
-				CommandePeer::doDelete($this, $con);
+				LigneCommandePeer::doDelete($this, $con);
 				$this->postDelete($con);
 				// symfony_behaviors behavior
-				foreach (sfMixer::getCallables('BaseCommande:delete:post') as $callable)
+				foreach (sfMixer::getCallables('BaseLigneCommande:delete:post') as $callable)
 				{
 				  call_user_func($callable, $this, $con);
 				}
@@ -600,7 +393,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(CommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(LigneCommandePeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		
 		$con->beginTransaction();
@@ -608,7 +401,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 		try {
 			$ret = $this->preSave($con);
 			// symfony_behaviors behavior
-			foreach (sfMixer::getCallables('BaseCommande:save:pre') as $callable)
+			foreach (sfMixer::getCallables('BaseLigneCommande:save:pre') as $callable)
 			{
 			  if (is_integer($affectedRows = call_user_func($callable, $this, $con)))
 			  {
@@ -618,16 +411,8 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			  }
 			}
 
-			// symfony_timestampable behavior
-			
 			if ($isInsert) {
 				$ret = $ret && $this->preInsert($con);
-				// symfony_timestampable behavior
-				if (!$this->isColumnModified(CommandePeer::CREATED_AT))
-				{
-				  $this->setCreatedAt(time());
-				}
-
 			} else {
 				$ret = $ret && $this->preUpdate($con);
 			}
@@ -640,12 +425,12 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 				}
 				$this->postSave($con);
 				// symfony_behaviors behavior
-				foreach (sfMixer::getCallables('BaseCommande:save:post') as $callable)
+				foreach (sfMixer::getCallables('BaseLigneCommande:save:post') as $callable)
 				{
 				  call_user_func($callable, $this, $con, $affectedRows);
 				}
 
-				CommandePeer::addInstanceToPool($this);
+				LigneCommandePeer::addInstanceToPool($this);
 			} else {
 				$affectedRows = 0;
 			}
@@ -679,11 +464,11 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			// method.  This object relates to these object(s) by a
 			// foreign key reference.
 
-			if ($this->aClient !== null) {
-				if ($this->aClient->isModified() || $this->aClient->isNew()) {
-					$affectedRows += $this->aClient->save($con);
+			if ($this->aCommande !== null) {
+				if ($this->aCommande->isModified() || $this->aCommande->isNew()) {
+					$affectedRows += $this->aCommande->save($con);
 				}
-				$this->setClient($this->aClient);
+				$this->setCommande($this->aCommande);
 			}
 
 			if ($this->aArticle !== null) {
@@ -693,34 +478,21 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 				$this->setArticle($this->aArticle);
 			}
 
-			if ($this->isNew() ) {
-				$this->modifiedColumns[] = CommandePeer::ID;
-			}
 
 			// If this object has been modified, then save it to the database.
 			if ($this->isModified()) {
 				if ($this->isNew()) {
-					$pk = CommandePeer::doInsert($this, $con);
+					$pk = LigneCommandePeer::doInsert($this, $con);
 					$affectedRows += 1; // we are assuming that there is only 1 row per doInsert() which
 										 // should always be true here (even though technically
 										 // BasePeer::doInsert() can insert multiple rows).
 
-					$this->setId($pk);  //[IMV] update autoincrement primary key
-
 					$this->setNew(false);
 				} else {
-					$affectedRows += CommandePeer::doUpdate($this, $con);
+					$affectedRows += LigneCommandePeer::doUpdate($this, $con);
 				}
 
 				$this->resetModified(); // [HL] After being saved an object is no longer 'modified'
-			}
-
-			if ($this->collLigneCommandes !== null) {
-				foreach ($this->collLigneCommandes as $referrerFK) {
-					if (!$referrerFK->isDeleted()) {
-						$affectedRows += $referrerFK->save($con);
-					}
-				}
 			}
 
 			$this->alreadyInSave = false;
@@ -794,9 +566,9 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			// method.  This object relates to these object(s) by a
 			// foreign key reference.
 
-			if ($this->aClient !== null) {
-				if (!$this->aClient->validate($columns)) {
-					$failureMap = array_merge($failureMap, $this->aClient->getValidationFailures());
+			if ($this->aCommande !== null) {
+				if (!$this->aCommande->validate($columns)) {
+					$failureMap = array_merge($failureMap, $this->aCommande->getValidationFailures());
 				}
 			}
 
@@ -807,18 +579,10 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			}
 
 
-			if (($retval = CommandePeer::doValidate($this, $columns)) !== true) {
+			if (($retval = LigneCommandePeer::doValidate($this, $columns)) !== true) {
 				$failureMap = array_merge($failureMap, $retval);
 			}
 
-
-				if ($this->collLigneCommandes !== null) {
-					foreach ($this->collLigneCommandes as $referrerFK) {
-						if (!$referrerFK->validate($columns)) {
-							$failureMap = array_merge($failureMap, $referrerFK->getValidationFailures());
-						}
-					}
-				}
 
 
 			$this->alreadyInValidation = false;
@@ -838,7 +602,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function getByName($name, $type = BasePeer::TYPE_PHPNAME)
 	{
-		$pos = CommandePeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
+		$pos = LigneCommandePeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
 		$field = $this->getByPosition($pos);
 		return $field;
 	}
@@ -854,7 +618,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	{
 		switch($pos) {
 			case 0:
-				return $this->getClientId();
+				return $this->getCommandeId();
 				break;
 			case 1:
 				return $this->getArticleId();
@@ -864,15 +628,6 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 				break;
 			case 3:
 				return $this->getPrix();
-				break;
-			case 4:
-				return $this->getCreatedAt();
-				break;
-			case 5:
-				return $this->getEtat();
-				break;
-			case 6:
-				return $this->getId();
 				break;
 			default:
 				return null;
@@ -893,15 +648,12 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function toArray($keyType = BasePeer::TYPE_PHPNAME, $includeLazyLoadColumns = true)
 	{
-		$keys = CommandePeer::getFieldNames($keyType);
+		$keys = LigneCommandePeer::getFieldNames($keyType);
 		$result = array(
-			$keys[0] => $this->getClientId(),
+			$keys[0] => $this->getCommandeId(),
 			$keys[1] => $this->getArticleId(),
 			$keys[2] => $this->getQuantite(),
 			$keys[3] => $this->getPrix(),
-			$keys[4] => $this->getCreatedAt(),
-			$keys[5] => $this->getEtat(),
-			$keys[6] => $this->getId(),
 		);
 		return $result;
 	}
@@ -918,7 +670,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function setByName($name, $value, $type = BasePeer::TYPE_PHPNAME)
 	{
-		$pos = CommandePeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
+		$pos = LigneCommandePeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
 		return $this->setByPosition($pos, $value);
 	}
 
@@ -934,7 +686,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	{
 		switch($pos) {
 			case 0:
-				$this->setClientId($value);
+				$this->setCommandeId($value);
 				break;
 			case 1:
 				$this->setArticleId($value);
@@ -944,15 +696,6 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 				break;
 			case 3:
 				$this->setPrix($value);
-				break;
-			case 4:
-				$this->setCreatedAt($value);
-				break;
-			case 5:
-				$this->setEtat($value);
-				break;
-			case 6:
-				$this->setId($value);
 				break;
 		} // switch()
 	}
@@ -976,15 +719,12 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function fromArray($arr, $keyType = BasePeer::TYPE_PHPNAME)
 	{
-		$keys = CommandePeer::getFieldNames($keyType);
+		$keys = LigneCommandePeer::getFieldNames($keyType);
 
-		if (array_key_exists($keys[0], $arr)) $this->setClientId($arr[$keys[0]]);
+		if (array_key_exists($keys[0], $arr)) $this->setCommandeId($arr[$keys[0]]);
 		if (array_key_exists($keys[1], $arr)) $this->setArticleId($arr[$keys[1]]);
 		if (array_key_exists($keys[2], $arr)) $this->setQuantite($arr[$keys[2]]);
 		if (array_key_exists($keys[3], $arr)) $this->setPrix($arr[$keys[3]]);
-		if (array_key_exists($keys[4], $arr)) $this->setCreatedAt($arr[$keys[4]]);
-		if (array_key_exists($keys[5], $arr)) $this->setEtat($arr[$keys[5]]);
-		if (array_key_exists($keys[6], $arr)) $this->setId($arr[$keys[6]]);
 	}
 
 	/**
@@ -994,15 +734,12 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function buildCriteria()
 	{
-		$criteria = new Criteria(CommandePeer::DATABASE_NAME);
+		$criteria = new Criteria(LigneCommandePeer::DATABASE_NAME);
 
-		if ($this->isColumnModified(CommandePeer::CLIENT_ID)) $criteria->add(CommandePeer::CLIENT_ID, $this->client_id);
-		if ($this->isColumnModified(CommandePeer::ARTICLE_ID)) $criteria->add(CommandePeer::ARTICLE_ID, $this->article_id);
-		if ($this->isColumnModified(CommandePeer::QUANTITE)) $criteria->add(CommandePeer::QUANTITE, $this->quantite);
-		if ($this->isColumnModified(CommandePeer::PRIX)) $criteria->add(CommandePeer::PRIX, $this->prix);
-		if ($this->isColumnModified(CommandePeer::CREATED_AT)) $criteria->add(CommandePeer::CREATED_AT, $this->created_at);
-		if ($this->isColumnModified(CommandePeer::ETAT)) $criteria->add(CommandePeer::ETAT, $this->etat);
-		if ($this->isColumnModified(CommandePeer::ID)) $criteria->add(CommandePeer::ID, $this->id);
+		if ($this->isColumnModified(LigneCommandePeer::COMMANDE_ID)) $criteria->add(LigneCommandePeer::COMMANDE_ID, $this->commande_id);
+		if ($this->isColumnModified(LigneCommandePeer::ARTICLE_ID)) $criteria->add(LigneCommandePeer::ARTICLE_ID, $this->article_id);
+		if ($this->isColumnModified(LigneCommandePeer::QUANTITE)) $criteria->add(LigneCommandePeer::QUANTITE, $this->quantite);
+		if ($this->isColumnModified(LigneCommandePeer::PRIX)) $criteria->add(LigneCommandePeer::PRIX, $this->prix);
 
 		return $criteria;
 	}
@@ -1017,31 +754,43 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function buildPkeyCriteria()
 	{
-		$criteria = new Criteria(CommandePeer::DATABASE_NAME);
+		$criteria = new Criteria(LigneCommandePeer::DATABASE_NAME);
 
-		$criteria->add(CommandePeer::ID, $this->id);
+		$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->commande_id);
+		$criteria->add(LigneCommandePeer::ARTICLE_ID, $this->article_id);
 
 		return $criteria;
 	}
 
 	/**
-	 * Returns the primary key for this object (row).
-	 * @return     int
+	 * Returns the composite primary key for this object.
+	 * The array elements will be in same order as specified in XML.
+	 * @return     array
 	 */
 	public function getPrimaryKey()
 	{
-		return $this->getId();
+		$pks = array();
+
+		$pks[0] = $this->getCommandeId();
+
+		$pks[1] = $this->getArticleId();
+
+		return $pks;
 	}
 
 	/**
-	 * Generic method to set the primary key (id column).
+	 * Set the [composite] primary key.
 	 *
-	 * @param      int $key Primary key.
+	 * @param      array $keys The elements of the composite key (order must match the order in XML file).
 	 * @return     void
 	 */
-	public function setPrimaryKey($key)
+	public function setPrimaryKey($keys)
 	{
-		$this->setId($key);
+
+		$this->setCommandeId($keys[0]);
+
+		$this->setArticleId($keys[1]);
+
 	}
 
 	/**
@@ -1050,14 +799,14 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 * If desired, this method can also make copies of all associated (fkey referrers)
 	 * objects.
 	 *
-	 * @param      object $copyObj An object of Commande (or compatible) type.
+	 * @param      object $copyObj An object of LigneCommande (or compatible) type.
 	 * @param      boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
 	 * @throws     PropelException
 	 */
 	public function copyInto($copyObj, $deepCopy = false)
 	{
 
-		$copyObj->setClientId($this->client_id);
+		$copyObj->setCommandeId($this->commande_id);
 
 		$copyObj->setArticleId($this->article_id);
 
@@ -1065,28 +814,8 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 		$copyObj->setPrix($this->prix);
 
-		$copyObj->setCreatedAt($this->created_at);
-
-		$copyObj->setEtat($this->etat);
-
-
-		if ($deepCopy) {
-			// important: temporarily setNew(false) because this affects the behavior of
-			// the getter/setter methods for fkey referrer objects.
-			$copyObj->setNew(false);
-
-			foreach ($this->getLigneCommandes() as $relObj) {
-				if ($relObj !== $this) {  // ensure that we don't try to copy a reference to ourselves
-					$copyObj->addLigneCommande($relObj->copy($deepCopy));
-				}
-			}
-
-		} // if ($deepCopy)
-
 
 		$copyObj->setNew(true);
-
-		$copyObj->setId(NULL); // this is a auto-increment column, so set to default value
 
 	}
 
@@ -1099,7 +828,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 * objects.
 	 *
 	 * @param      boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
-	 * @return     Commande Clone of current object.
+	 * @return     LigneCommande Clone of current object.
 	 * @throws     PropelException
 	 */
 	public function copy($deepCopy = false)
@@ -1118,37 +847,37 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 * same instance for all member of this class. The method could therefore
 	 * be static, but this would prevent one from overriding the behavior.
 	 *
-	 * @return     CommandePeer
+	 * @return     LigneCommandePeer
 	 */
 	public function getPeer()
 	{
 		if (self::$peer === null) {
-			self::$peer = new CommandePeer();
+			self::$peer = new LigneCommandePeer();
 		}
 		return self::$peer;
 	}
 
 	/**
-	 * Declares an association between this object and a Client object.
+	 * Declares an association between this object and a Commande object.
 	 *
-	 * @param      Client $v
-	 * @return     Commande The current object (for fluent API support)
+	 * @param      Commande $v
+	 * @return     LigneCommande The current object (for fluent API support)
 	 * @throws     PropelException
 	 */
-	public function setClient(Client $v = null)
+	public function setCommande(Commande $v = null)
 	{
 		if ($v === null) {
-			$this->setClientId(NULL);
+			$this->setCommandeId(NULL);
 		} else {
-			$this->setClientId($v->getId());
+			$this->setCommandeId($v->getId());
 		}
 
-		$this->aClient = $v;
+		$this->aCommande = $v;
 
 		// Add binding for other direction of this n:n relationship.
-		// If this object has already been added to the Client object, it will not be re-added.
+		// If this object has already been added to the Commande object, it will not be re-added.
 		if ($v !== null) {
-			$v->addCommande($this);
+			$v->addLigneCommande($this);
 		}
 
 		return $this;
@@ -1156,32 +885,32 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 
 
 	/**
-	 * Get the associated Client object
+	 * Get the associated Commande object
 	 *
 	 * @param      PropelPDO Optional Connection object.
-	 * @return     Client The associated Client object.
+	 * @return     Commande The associated Commande object.
 	 * @throws     PropelException
 	 */
-	public function getClient(PropelPDO $con = null)
+	public function getCommande(PropelPDO $con = null)
 	{
-		if ($this->aClient === null && ($this->client_id !== null)) {
-			$this->aClient = ClientPeer::retrieveByPk($this->client_id);
+		if ($this->aCommande === null && ($this->commande_id !== null)) {
+			$this->aCommande = CommandePeer::retrieveByPk($this->commande_id);
 			/* The following can be used additionally to
 			   guarantee the related object contains a reference
 			   to this object.  This level of coupling may, however, be
 			   undesirable since it could result in an only partially populated collection
 			   in the referenced object.
-			   $this->aClient->addCommandes($this);
+			   $this->aCommande->addLigneCommandes($this);
 			 */
 		}
-		return $this->aClient;
+		return $this->aCommande;
 	}
 
 	/**
 	 * Declares an association between this object and a Article object.
 	 *
 	 * @param      Article $v
-	 * @return     Commande The current object (for fluent API support)
+	 * @return     LigneCommande The current object (for fluent API support)
 	 * @throws     PropelException
 	 */
 	public function setArticle(Article $v = null)
@@ -1197,7 +926,7 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 		// Add binding for other direction of this n:n relationship.
 		// If this object has already been added to the Article object, it will not be re-added.
 		if ($v !== null) {
-			$v->addCommande($this);
+			$v->addLigneCommande($this);
 		}
 
 		return $this;
@@ -1220,211 +949,10 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 			   to this object.  This level of coupling may, however, be
 			   undesirable since it could result in an only partially populated collection
 			   in the referenced object.
-			   $this->aArticle->addCommandes($this);
+			   $this->aArticle->addLigneCommandes($this);
 			 */
 		}
 		return $this->aArticle;
-	}
-
-	/**
-	 * Clears out the collLigneCommandes collection (array).
-	 *
-	 * This does not modify the database; however, it will remove any associated objects, causing
-	 * them to be refetched by subsequent calls to accessor method.
-	 *
-	 * @return     void
-	 * @see        addLigneCommandes()
-	 */
-	public function clearLigneCommandes()
-	{
-		$this->collLigneCommandes = null; // important to set this to NULL since that means it is uninitialized
-	}
-
-	/**
-	 * Initializes the collLigneCommandes collection (array).
-	 *
-	 * By default this just sets the collLigneCommandes collection to an empty array (like clearcollLigneCommandes());
-	 * however, you may wish to override this method in your stub class to provide setting appropriate
-	 * to your application -- for example, setting the initial array to the values stored in database.
-	 *
-	 * @return     void
-	 */
-	public function initLigneCommandes()
-	{
-		$this->collLigneCommandes = array();
-	}
-
-	/**
-	 * Gets an array of LigneCommande objects which contain a foreign key that references this object.
-	 *
-	 * If this collection has already been initialized with an identical Criteria, it returns the collection.
-	 * Otherwise if this Commande has previously been saved, it will retrieve
-	 * related LigneCommandes from storage. If this Commande is new, it will return
-	 * an empty collection or the current collection, the criteria is ignored on a new object.
-	 *
-	 * @param      PropelPDO $con
-	 * @param      Criteria $criteria
-	 * @return     array LigneCommande[]
-	 * @throws     PropelException
-	 */
-	public function getLigneCommandes($criteria = null, PropelPDO $con = null)
-	{
-		if ($criteria === null) {
-			$criteria = new Criteria(CommandePeer::DATABASE_NAME);
-		}
-		elseif ($criteria instanceof Criteria)
-		{
-			$criteria = clone $criteria;
-		}
-
-		if ($this->collLigneCommandes === null) {
-			if ($this->isNew()) {
-			   $this->collLigneCommandes = array();
-			} else {
-
-				$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-				LigneCommandePeer::addSelectColumns($criteria);
-				$this->collLigneCommandes = LigneCommandePeer::doSelect($criteria, $con);
-			}
-		} else {
-			// criteria has no effect for a new object
-			if (!$this->isNew()) {
-				// the following code is to determine if a new query is
-				// called for.  If the criteria is the same as the last
-				// one, just return the collection.
-
-
-				$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-				LigneCommandePeer::addSelectColumns($criteria);
-				if (!isset($this->lastLigneCommandeCriteria) || !$this->lastLigneCommandeCriteria->equals($criteria)) {
-					$this->collLigneCommandes = LigneCommandePeer::doSelect($criteria, $con);
-				}
-			}
-		}
-		$this->lastLigneCommandeCriteria = $criteria;
-		return $this->collLigneCommandes;
-	}
-
-	/**
-	 * Returns the number of related LigneCommande objects.
-	 *
-	 * @param      Criteria $criteria
-	 * @param      boolean $distinct
-	 * @param      PropelPDO $con
-	 * @return     int Count of related LigneCommande objects.
-	 * @throws     PropelException
-	 */
-	public function countLigneCommandes(Criteria $criteria = null, $distinct = false, PropelPDO $con = null)
-	{
-		if ($criteria === null) {
-			$criteria = new Criteria(CommandePeer::DATABASE_NAME);
-		} else {
-			$criteria = clone $criteria;
-		}
-
-		if ($distinct) {
-			$criteria->setDistinct();
-		}
-
-		$count = null;
-
-		if ($this->collLigneCommandes === null) {
-			if ($this->isNew()) {
-				$count = 0;
-			} else {
-
-				$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-				$count = LigneCommandePeer::doCount($criteria, false, $con);
-			}
-		} else {
-			// criteria has no effect for a new object
-			if (!$this->isNew()) {
-				// the following code is to determine if a new query is
-				// called for.  If the criteria is the same as the last
-				// one, just return count of the collection.
-
-
-				$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-				if (!isset($this->lastLigneCommandeCriteria) || !$this->lastLigneCommandeCriteria->equals($criteria)) {
-					$count = LigneCommandePeer::doCount($criteria, false, $con);
-				} else {
-					$count = count($this->collLigneCommandes);
-				}
-			} else {
-				$count = count($this->collLigneCommandes);
-			}
-		}
-		return $count;
-	}
-
-	/**
-	 * Method called to associate a LigneCommande object to this object
-	 * through the LigneCommande foreign key attribute.
-	 *
-	 * @param      LigneCommande $l LigneCommande
-	 * @return     void
-	 * @throws     PropelException
-	 */
-	public function addLigneCommande(LigneCommande $l)
-	{
-		if ($this->collLigneCommandes === null) {
-			$this->initLigneCommandes();
-		}
-		if (!in_array($l, $this->collLigneCommandes, true)) { // only add it if the **same** object is not already associated
-			array_push($this->collLigneCommandes, $l);
-			$l->setCommande($this);
-		}
-	}
-
-
-	/**
-	 * If this collection has already been initialized with
-	 * an identical criteria, it returns the collection.
-	 * Otherwise if this Commande is new, it will return
-	 * an empty collection; or if this Commande has previously
-	 * been saved, it will retrieve related LigneCommandes from storage.
-	 *
-	 * This method is protected by default in order to keep the public
-	 * api reasonable.  You can provide public methods for those you
-	 * actually need in Commande.
-	 */
-	public function getLigneCommandesJoinArticle($criteria = null, $con = null, $join_behavior = Criteria::LEFT_JOIN)
-	{
-		if ($criteria === null) {
-			$criteria = new Criteria(CommandePeer::DATABASE_NAME);
-		}
-		elseif ($criteria instanceof Criteria)
-		{
-			$criteria = clone $criteria;
-		}
-
-		if ($this->collLigneCommandes === null) {
-			if ($this->isNew()) {
-				$this->collLigneCommandes = array();
-			} else {
-
-				$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-				$this->collLigneCommandes = LigneCommandePeer::doSelectJoinArticle($criteria, $con, $join_behavior);
-			}
-		} else {
-			// the following code is to determine if a new query is
-			// called for.  If the criteria is the same as the last
-			// one, just return the collection.
-
-			$criteria->add(LigneCommandePeer::COMMANDE_ID, $this->id);
-
-			if (!isset($this->lastLigneCommandeCriteria) || !$this->lastLigneCommandeCriteria->equals($criteria)) {
-				$this->collLigneCommandes = LigneCommandePeer::doSelectJoinArticle($criteria, $con, $join_behavior);
-			}
-		}
-		$this->lastLigneCommandeCriteria = $criteria;
-
-		return $this->collLigneCommandes;
 	}
 
 	/**
@@ -1439,15 +967,9 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	public function clearAllReferences($deep = false)
 	{
 		if ($deep) {
-			if ($this->collLigneCommandes) {
-				foreach ((array) $this->collLigneCommandes as $o) {
-					$o->clearAllReferences($deep);
-				}
-			}
 		} // if ($deep)
 
-		$this->collLigneCommandes = null;
-			$this->aClient = null;
+			$this->aCommande = null;
 			$this->aArticle = null;
 	}
 
@@ -1458,9 +980,9 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	 */
 	public function __call($method, $arguments)
 	{
-	  if (!$callable = sfMixer::getCallable('BaseCommande:'.$method))
+	  if (!$callable = sfMixer::getCallable('BaseLigneCommande:'.$method))
 	  {
-	    throw new sfException(sprintf('Call to undefined method BaseCommande::%s', $method));
+	    throw new sfException(sprintf('Call to undefined method BaseLigneCommande::%s', $method));
 	  }
 	
 	  array_unshift($arguments, $this);
@@ -1468,4 +990,4 @@ abstract class BaseCommande extends BaseObject  implements Persistent {
 	  return call_user_func_array($callable, $arguments);
 	}
 
-} // BaseCommande
+} // BaseLigneCommande

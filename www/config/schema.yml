@@ -1,10 +1,10 @@
 propel:
-  magasin_categorie:
+  categorie:
     _attributes: { phpName: Categorie }
     id:
     nom: { type: varchar(255) }
     description: { type: longvarchar }
-  magasin_article:
+  article:
     _attributes: { phpName: Article }
     id:
     nom: { type: varchar(255) }
@@ -13,7 +13,7 @@ propel:
     popularite: { type: integer }
     stock: { type: integer }
     categorie_id:
-  magasin_client:
+  client:
     _attributes: { phpName: Client }
     id:
     nom: { type: varchar(255) }
@@ -21,12 +21,7 @@ propel:
     adresse: { type: varchar(255) }
     mail: { type: varchar(255) }
     telephone: { type: varchar(15) }
-  magasin_panier:
-    _attributes: { phpName: Panier }
-    client_id:
-    article_id:
-    quantite: { type: integer }
-  magasin_commande:
+  commande:
     _attributes: { phpName: Commande }
     client_id:
     article_id:
@@ -34,3 +29,8 @@ propel:
     prix: { type: float }
     created_at:
     etat: { type: varchar(10), default: attente }
+  ligne_commande:
+    commande_id: { type: integer, primaryKey: true, foreignTable: commande, foreignReference: id }
+    article_id: { type: integer, primaryKey: true, foreignTable: article, foreignReference: id }
+    quantite: { type: integer }
+    prix: { type: float }

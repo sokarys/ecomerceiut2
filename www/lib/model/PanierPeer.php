@@ -17,5 +17,21 @@
  * @package    lib.model
  */
 class PanierPeer extends BasePanierPeer {
+    public function AjoutArticle($id){
+        PanierPeer::doInsert(ArticlePeer::retrieveByPK($id));
+    }
+    public function SupprArticle(){
 
+    }
+    public function UpdatePanier(){
+
+    }
+    public function VoirPanier(){
+        $c = new Criteria();
+        $c->add(PanierPeer::ID, "*");
+        return PanierPeer::doSelect($c);
+    }
+    public function ViderPanier(){
+        PanierPeer::doDeleteAll();
+    }
 } // PanierPeer

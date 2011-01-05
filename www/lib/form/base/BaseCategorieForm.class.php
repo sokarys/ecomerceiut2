@@ -5,9 +5,9 @@
  *
  * @method Categorie getObject() Returns the current form's model object
  *
- * @package    ecommerce
+ * @package    ##PROJECT_NAME##
  * @subpackage form
- * @author     Your name here
+ * @author     ##AUTHOR_NAME##
  */
 abstract class BaseCategorieForm extends BaseFormPropel
 {
