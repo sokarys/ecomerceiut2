@@ -29,6 +29,7 @@ CREATE TABLE `magasin_article`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(255),
+	`prix` FLOAT,
 	`description` TEXT,
 	`popularite` INTEGER,
 	`stock` INTEGER,
@@ -94,6 +95,9 @@ CREATE TABLE `magasin_commande`
 	`client_id` INTEGER,
 	`article_id` INTEGER,
 	`quantite` INTEGER,
+	`prix` FLOAT,
+	`created_at` DATETIME,
+	`etat` VARCHAR(10) default 'attente',
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`),
 	INDEX `magasin_commande_FI_1` (`client_id`),

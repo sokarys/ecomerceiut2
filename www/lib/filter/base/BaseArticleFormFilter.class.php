@@ -13,6 +13,7 @@ abstract class BaseArticleFormFilter extends BaseFormFilterPropel
   {
     $this->setWidgets(array(
       'nom'          => new sfWidgetFormFilterInput(),
+      'prix'         => new sfWidgetFormFilterInput(),
       'description'  => new sfWidgetFormFilterInput(),
       'popularite'   => new sfWidgetFormFilterInput(),
       'stock'        => new sfWidgetFormFilterInput(),
@@ -21,6 +22,7 @@ abstract class BaseArticleFormFilter extends BaseFormFilterPropel
 
     $this->setValidators(array(
       'nom'          => new sfValidatorPass(array('required' => false)),
+      'prix'         => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'description'  => new sfValidatorPass(array('required' => false)),
       'popularite'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'stock'        => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
@@ -44,6 +46,7 @@ abstract class BaseArticleFormFilter extends BaseFormFilterPropel
     return array(
       'id'           => 'Number',
       'nom'          => 'Text',
+      'prix'         => 'Number',
       'description'  => 'Text',
       'popularite'   => 'Number',
       'stock'        => 'Number',

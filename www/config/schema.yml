@@ -8,6 +8,7 @@ propel:
     _attributes: { phpName: Article }
     id:
     nom: { type: varchar(255) }
+    prix: { type: float }
     description: { type: longvarchar }
     popularite: { type: integer }
     stock: { type: integer }
@@ -30,3 +31,6 @@ propel:
     client_id:
     article_id:
     quantite: { type: integer }
+    prix: { type: float }
+    created_at:
+    etat: { type: varchar(10), default: attente }

@@ -16,6 +16,7 @@ abstract class BaseArticleForm extends BaseFormPropel
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
       'nom'          => new sfWidgetFormInputText(),
+      'prix'         => new sfWidgetFormInputText(),
       'description'  => new sfWidgetFormTextarea(),
       'popularite'   => new sfWidgetFormInputText(),
       'stock'        => new sfWidgetFormInputText(),
@@ -25,6 +26,7 @@ abstract class BaseArticleForm extends BaseFormPropel
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->getId()), 'empty_value' => $this->getObject()->getId(), 'required' => false)),
       'nom'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'prix'         => new sfValidatorNumber(array('required' => false)),
       'description'  => new sfValidatorString(array('required' => false)),
       'popularite'   => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647, 'required' => false)),
       'stock'        => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647, 'required' => false)),
