@@ -20,4 +20,14 @@ class Commande extends BaseCommande {
     public function __toString(){
         return $this->getId();
     }
+    public function getTotal(){
+        $total =0;
+        $c = new criteria();
+        $c->add(LigneCommandePeer::COMMANDE_ID,$this->getId());
+        $array[] = LigneCommandePeer::doSelect($c);
+        foreach(  $array as $com){
+         
+        }
+
+    }
 } // Commande

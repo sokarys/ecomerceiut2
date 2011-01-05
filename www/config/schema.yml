@@ -26,7 +26,6 @@ propel:
     client_id:
     article_id:
     quantite: { type: integer }
-    prix: { type: float }
     created_at:
     etat: { type: varchar(10), default: attente }
   ligne_commande:

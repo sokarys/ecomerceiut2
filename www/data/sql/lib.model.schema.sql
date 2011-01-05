@@ -71,7 +71,6 @@ CREATE TABLE `commande`
 	`client_id` INTEGER,
 	`article_id` INTEGER,
 	`quantite` INTEGER,
-	`prix` FLOAT,
 	`created_at` DATETIME,
 	`etat` VARCHAR(10) default 'attente',
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
