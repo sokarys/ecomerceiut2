@@ -3,9 +3,9 @@
 /**
  * LigneCommande form.
  *
- * @package    ##PROJECT_NAME##
+ * @package    ecommerce
  * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 class LigneCommandeForm extends BaseLigneCommandeForm
 {

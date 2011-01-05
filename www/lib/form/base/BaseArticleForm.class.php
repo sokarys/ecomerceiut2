@@ -5,9 +5,9 @@
  *
  * @method Article getObject() Returns the current form's model object
  *
- * @package    ##PROJECT_NAME##
+ * @package    ecommerce
  * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @author     Your name here
  */
 abstract class BaseArticleForm extends BaseFormPropel
 {

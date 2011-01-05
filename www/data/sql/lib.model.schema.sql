@@ -4,13 +4,13 @@
 SET FOREIGN_KEY_CHECKS = 0;
 
 #-----------------------------------------------------------------------------
-#-- magasin_categorie
+#-- categorie
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `magasin_categorie`;
+DROP TABLE IF EXISTS `categorie`;
 
 
-CREATE TABLE `magasin_categorie`
+CREATE TABLE `categorie`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(255),
@@ -19,13 +19,13 @@ CREATE TABLE `magasin_categorie`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- magasin_article
+#-- article
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `magasin_article`;
+DROP TABLE IF EXISTS `article`;
 
 
-CREATE TABLE `magasin_article`
+CREATE TABLE `article`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(255),
@@ -35,20 +35,20 @@ CREATE TABLE `magasin_article`
 	`stock` INTEGER,
 	`categorie_id` INTEGER,
 	PRIMARY KEY (`id`),
-	INDEX `magasin_article_FI_1` (`categorie_id`),
-	CONSTRAINT `magasin_article_FK_1`
+	INDEX `article_FI_1` (`categorie_id`),
+	CONSTRAINT `article_FK_1`
 		FOREIGN KEY (`categorie_id`)
-		REFERENCES `magasin_categorie` (`id`)
+		REFERENCES `categorie` (`id`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- magasin_client
+#-- client
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `magasin_client`;
+DROP TABLE IF EXISTS `client`;
 
 
-CREATE TABLE `magasin_client`
+CREATE TABLE `client`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`nom` VARCHAR(255),
@@ -60,37 +60,13 @@ CREATE TABLE `magasin_client`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- magasin_panier
+#-- commande
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `magasin_panier`;
+DROP TABLE IF EXISTS `commande`;
 
 
-CREATE TABLE `magasin_panier`
-(
-	`client_id` INTEGER,
-	`article_id` INTEGER,
-	`quantite` INTEGER,
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	PRIMARY KEY (`id`),
-	INDEX `magasin_panier_FI_1` (`client_id`),
-	CONSTRAINT `magasin_panier_FK_1`
-		FOREIGN KEY (`client_id`)
-		REFERENCES `magasin_client` (`id`),
-	INDEX `magasin_panier_FI_2` (`article_id`),
-	CONSTRAINT `magasin_panier_FK_2`
-		FOREIGN KEY (`article_id`)
-		REFERENCES `magasin_article` (`id`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- magasin_commande
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `magasin_commande`;
-
-
-CREATE TABLE `magasin_commande`
+CREATE TABLE `commande`
 (
 	`client_id` INTEGER,
 	`article_id` INTEGER,
@@ -100,14 +76,37 @@ CREATE TABLE `magasin_commande`
 	`etat` VARCHAR(10) default 'attente',
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	PRIMARY KEY (`id`),
-	INDEX `magasin_commande_FI_1` (`client_id`),
-	CONSTRAINT `magasin_commande_FK_1`
+	INDEX `commande_FI_1` (`client_id`),
+	CONSTRAINT `commande_FK_1`
 		FOREIGN KEY (`client_id`)
-		REFERENCES `magasin_client` (`id`),
-	INDEX `magasin_commande_FI_2` (`article_id`),
-	CONSTRAINT `magasin_commande_FK_2`
+		REFERENCES `client` (`id`),
+	INDEX `commande_FI_2` (`article_id`),
+	CONSTRAINT `commande_FK_2`
 		FOREIGN KEY (`article_id`)
-		REFERENCES `magasin_article` (`id`)
+		REFERENCES `article` (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- ligne_commande
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `ligne_commande`;
+
+
+CREATE TABLE `ligne_commande`
+(
+	`commande_id` INTEGER  NOT NULL,
+	`article_id` INTEGER  NOT NULL,
+	`quantite` INTEGER,
+	`prix` FLOAT,
+	PRIMARY KEY (`commande_id`,`article_id`),
+	CONSTRAINT `ligne_commande_FK_1`
+		FOREIGN KEY (`commande_id`)
+		REFERENCES `commande` (`id`),
+	INDEX `ligne_commande_FI_2` (`article_id`),
+	CONSTRAINT `ligne_commande_FK_2`
+		FOREIGN KEY (`article_id`)
+		REFERENCES `article` (`id`)
 )Type=InnoDB;
 
 # This restores the fkey checks, after having unset them earlier

@@ -1,0 +1,66 @@
+Jan 05 13:25:21 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:25:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/index with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 05 13:25:22 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:25:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:25:22 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 05 13:25:22 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:25:22 symfony [debug] {sfPropelLogger} SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 05 13:25:22 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 05 13:25:22 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:25:22 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:25:22 symfony [info] {sfWebResponse} Send content (783 o)
+Jan 05 13:26:42 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:26:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /commande/index with parameters array (  'module' => 'commande',  'action' => 'index',)
+Jan 05 13:26:42 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:26:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:26:42 symfony [info] {commandeActions} Call "commandeActions->executeIndex()"
+Jan 05 13:26:42 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:26:42 symfony [debug] {sfPropelLogger} SELECT commande.CLIENT_ID, commande.ARTICLE_ID, commande.QUANTITE, commande.PRIX, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande`
+Jan 05 13:26:42 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/commande/templates/indexSuccess.php"
+Jan 05 13:26:42 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:26:42 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:26:42 symfony [info] {sfWebResponse} Send content (782 o)
+Jan 05 13:26:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:26:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /commande/index with parameters array (  'module' => 'commande',  'action' => 'index',)
+Jan 05 13:26:50 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:26:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:26:50 symfony [info] {commandeActions} Call "commandeActions->executeIndex()"
+Jan 05 13:26:50 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:26:50 symfony [debug] {sfPropelLogger} SELECT commande.CLIENT_ID, commande.ARTICLE_ID, commande.QUANTITE, commande.PRIX, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande`
+Jan 05 13:26:50 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/commande/templates/indexSuccess.php"
+Jan 05 13:26:50 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:26:50 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:26:50 symfony [info] {sfWebResponse} Send content (782 o)
+Jan 05 13:27:24 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:27:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/index with parameters array (  'module' => 'client',  'action' => 'index',)
+Jan 05 13:27:24 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:27:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:27:24 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Jan 05 13:27:24 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:27:24 symfony [debug] {sfPropelLogger} SELECT client.ID, client.NOM, client.PRENOM, client.ADRESSE, client.MAIL, client.TELEPHONE FROM `client`
+Jan 05 13:27:24 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/client/templates/indexSuccess.php"
+Jan 05 13:27:24 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:27:24 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:27:24 symfony [info] {sfWebResponse} Send content (752 o)
+Jan 05 13:29:47 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:29:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /categorie/index with parameters array (  'module' => 'categorie',  'action' => 'index',)
+Jan 05 13:29:47 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:29:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:29:47 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 05 13:29:47 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:29:47 symfony [debug] {sfPropelLogger} SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 05 13:29:47 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/indexSuccess.php"
+Jan 05 13:29:47 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:29:47 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:29:47 symfony [info] {sfWebResponse} Send content (695 o)
+Jan 05 13:29:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 05 13:29:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /lignecommande/index with parameters array (  'module' => 'lignecommande',  'action' => 'index',)
+Jan 05 13:29:51 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 05 13:29:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 05 13:29:51 symfony [info] {lignecommandeActions} Call "lignecommandeActions->executeIndex()"
+Jan 05 13:29:51 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 05 13:29:51 symfony [debug] {sfPropelLogger} SELECT ligne_commande.COMMANDE_ID, ligne_commande.ARTICLE_ID, ligne_commande.QUANTITE, ligne_commande.PRIX FROM `ligne_commande`
+Jan 05 13:29:51 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/lignecommande/templates/indexSuccess.php"
+Jan 05 13:29:51 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:29:51 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 05 13:29:51 symfony [info] {sfWebResponse} Send content (730 o)
