@@ -1,0 +1,32 @@
+propel:
+  categorie:
+    _attributes: { phpName: Categorie }
+    id:
+    nom: { type: varchar(255) }
+    description: { type: longvarchar }
+  article:
+    _attributes: { phpName: Article }
+    id:
+    nom: { type: varchar(255) }
+    description: { type: longvarchar }
+    popularite: { type: integer }
+    stock: { type: integer }
+    categorie_id:
+  client:
+    _attributes: { phpName: Client }
+    id:
+    nom: { type: varchar(255) }
+    prenom: { type: varchar(255) }
+    adresse: { type: varchar(255) }
+    mail: { type: varchar(255) }
+    telephone: { type: varchar(15) }
+  panier:
+    _attributes: { phpName: Panier }
+    client_id:
+    article_id:
+    quantite: { type: integer }
+  commande:
+    _attributes: { phpName: Commande }
+    client_id:
+    article_id:
+    quantite: { type: integer }

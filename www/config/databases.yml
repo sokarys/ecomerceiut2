@@ -24,9 +24,9 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=ecommerce;host=localhost
-      username:   root
-      password:   
+      dsn:        mysql:dbname=magasin;host=localhost
+      username:   client
+      password:   sesame
       encoding:   utf8
       persistent: true
       pooling:    true
