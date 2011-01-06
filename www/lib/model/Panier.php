@@ -10,14 +10,41 @@
  * @author Michael
  */
 class Panier {
-    public function addArticle(){
+    private $articles= array();
+
+    public function __construct() {
 
     }
-    public function DelArticle(){
+
+    public function __destruct() {
 
     }
-    public function AfficherPanier(){
+
+    public function addArticle(Article $a){
+
+    }
+
+    public function delArticle($index){
+        unset($articles[$index]);
+    }
+
+    public function nbTotalArticle(){
+
+    }
+
+    
+    public function afficherPanier(){
         
+    }
+    public function DelleteAll(){
+       $this->articles = array();
+    }
+    public function toCommande(){
+
+    }
+
+    public function __toString() {
+
     }
 }
 ?>
