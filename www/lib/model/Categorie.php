@@ -18,6 +18,6 @@
  */
 class Categorie extends BaseCategorie {
     public function __toString(){
-        return $this->getLibelle();
+        return $this->getNom();
     }
 } // Categorie
