@@ -1,0 +1,183 @@
+Jan 06 07:42:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /article with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 06 07:42:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:42:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:42:15 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 06 07:42:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:42:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 06 07:42:15 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 06 07:42:15 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:42:15 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:42:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:42:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:42:15 symfony [info] {sfWebDebugLogger} Configuration 385.09 ms (10)
+Jan 06 07:42:15 symfony [info] {sfWebDebugLogger} Factories 267.16 ms (1)
+Jan 06 07:42:15 symfony [info] {sfWebDebugLogger} Action "article/index" 37.12 ms (1)
+Jan 06 07:42:15 symfony [info] {sfWebDebugLogger} View "Success" for "article/index" 28.97 ms (1)
+Jan 06 07:42:15 symfony [info] {sfWebResponse} Send content (30082 o)
+Jan 06 07:42:28 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/new with parameters array (  'module' => 'article',  'action' => 'new',)
+Jan 06 07:42:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:42:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:42:28 symfony [info] {articleActions} Call "articleActions->executeNew()"
+Jan 06 07:42:28 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/newSuccess.php"
+Jan 06 07:42:28 symfony [info] {sfPartialView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/_form.php"
+Jan 06 07:42:28 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:42:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 06 07:42:28 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:42:28 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:42:28 symfony [err] {sfException} Call to undefined method BaseCategorie::getLibelle
+Jan 06 07:42:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 06 07:42:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:42:28 symfony [info] {sfWebDebugLogger} Configuration 18.17 ms (9)
+Jan 06 07:42:28 symfony [info] {sfWebDebugLogger} Factories 74.49 ms (1)
+Jan 06 07:42:28 symfony [info] {sfWebDebugLogger} Action "article/new" 232.83 ms (1)
+Jan 06 07:42:28 symfony [info] {sfWebDebugLogger} View "Success" for "article/new" 165.78 ms (1)
+Jan 06 07:42:28 symfony [info] {sfWebDebugLogger} Partial "article/_form" 131.67 ms (1)
+Jan 06 07:43:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /categorie with parameters array (  'module' => 'categorie',  'action' => 'index',)
+Jan 06 07:43:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:43:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:43:09 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 06 07:43:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:43:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 06 07:43:09 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/indexSuccess.php"
+Jan 06 07:43:09 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:43:09 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:43:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:43:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:43:09 symfony [info] {sfWebDebugLogger} Configuration 67.98 ms (10)
+Jan 06 07:43:09 symfony [info] {sfWebDebugLogger} Factories 75.18 ms (1)
+Jan 06 07:43:09 symfony [info] {sfWebDebugLogger} Action "categorie/index" 45.24 ms (1)
+Jan 06 07:43:09 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/index" 24.35 ms (1)
+Jan 06 07:43:09 symfony [info] {sfWebResponse} Send content (29815 o)
+Jan 06 07:44:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /categorie/new with parameters array (  'module' => 'categorie',  'action' => 'new',)
+Jan 06 07:44:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:44:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:44:37 symfony [info] {categorieActions} Call "categorieActions->executeNew()"
+Jan 06 07:44:37 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/newSuccess.php"
+Jan 06 07:44:37 symfony [info] {sfPartialView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/_form.php"
+Jan 06 07:44:37 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:44:37 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:44:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:44:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:44:37 symfony [info] {sfWebDebugLogger} Configuration 16.05 ms (9)
+Jan 06 07:44:37 symfony [info] {sfWebDebugLogger} Factories 58.73 ms (1)
+Jan 06 07:44:37 symfony [info] {sfWebDebugLogger} Action "categorie/new" 27.50 ms (1)
+Jan 06 07:44:37 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/new" 61.54 ms (1)
+Jan 06 07:44:37 symfony [info] {sfWebDebugLogger} Partial "categorie/_form" 44.00 ms (1)
+Jan 06 07:44:37 symfony [info] {sfWebResponse} Send content (31549 o)
+Jan 06 07:45:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /categorie/create with parameters array (  'module' => 'categorie',  'action' => 'create',)
+Jan 06 07:45:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:45:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:45:15 symfony [info] {categorieActions} Call "categorieActions->executeCreate()"
+Jan 06 07:45:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:45:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | INSERT INTO categorie (`ID`,`NOM`,`DESCRIPTION`) VALUES (NULL,'cauchemard','votre pire cauchemard')
+Jan 06 07:45:15 symfony [info] {sfFrontWebController} Redirect to "http://localhost/web/vitrine_dev.php/categorie/edit/id/2"
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send header "Location: http://localhost/web/vitrine_dev.php/categorie/edit/id/2"
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Configuration 13.30 ms (8)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Factories 71.87 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Action "categorie/create" 43.81 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send content (127 o)
+Jan 06 07:45:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /categorie/edit/id/2 with parameters array (  'module' => 'categorie',  'action' => 'edit',  'id' => '2',)
+Jan 06 07:45:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:45:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:45:15 symfony [info] {categorieActions} Call "categorieActions->executeEdit()"
+Jan 06 07:45:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:45:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie` WHERE categorie.ID='2'
+Jan 06 07:45:15 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/editSuccess.php"
+Jan 06 07:45:15 symfony [info] {sfPartialView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/_form.php"
+Jan 06 07:45:15 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:45:15 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Configuration 9.32 ms (9)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Factories 42.66 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Action "categorie/edit" 47.62 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/edit" 29.70 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebDebugLogger} Partial "categorie/_form" 7.07 ms (1)
+Jan 06 07:45:15 symfony [info] {sfWebResponse} Send content (34821 o)
+Jan 06 07:45:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /categorie with parameters array (  'module' => 'categorie',  'action' => 'index',)
+Jan 06 07:45:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:45:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:45:21 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 06 07:45:21 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:45:21 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 06 07:45:21 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/categorie/templates/indexSuccess.php"
+Jan 06 07:45:21 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:45:21 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:45:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:45:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:45:21 symfony [info] {sfWebDebugLogger} Configuration 16.32 ms (9)
+Jan 06 07:45:21 symfony [info] {sfWebDebugLogger} Factories 47.37 ms (1)
+Jan 06 07:45:21 symfony [info] {sfWebDebugLogger} Action "categorie/index" 34.29 ms (1)
+Jan 06 07:45:21 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/index" 20.60 ms (1)
+Jan 06 07:45:21 symfony [info] {sfWebResponse} Send content (30057 o)
+Jan 06 07:54:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /article with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 06 07:54:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:54:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:54:57 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 06 07:54:57 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:54:57 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 06 07:54:57 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 06 07:54:57 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:54:57 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:54:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:54:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:54:57 symfony [info] {sfWebDebugLogger} Configuration 17.52 ms (9)
+Jan 06 07:54:57 symfony [info] {sfWebDebugLogger} Factories 69.02 ms (1)
+Jan 06 07:54:57 symfony [info] {sfWebDebugLogger} Action "article/index" 36.83 ms (1)
+Jan 06 07:54:57 symfony [info] {sfWebDebugLogger} View "Success" for "article/index" 22.46 ms (1)
+Jan 06 07:54:57 symfony [info] {sfWebResponse} Send content (30080 o)
+Jan 06 07:54:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/new with parameters array (  'module' => 'article',  'action' => 'new',)
+Jan 06 07:54:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:54:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:54:58 symfony [info] {articleActions} Call "articleActions->executeNew()"
+Jan 06 07:54:58 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/newSuccess.php"
+Jan 06 07:54:58 symfony [info] {sfPartialView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/_form.php"
+Jan 06 07:54:58 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:54:58 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 06 07:54:58 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:54:58 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:54:58 symfony [err] {sfException} Call to undefined method BaseCategorie::getLibelle
+Jan 06 07:54:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Jan 06 07:54:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:54:59 symfony [info] {sfWebDebugLogger} Configuration 18.02 ms (9)
+Jan 06 07:54:59 symfony [info] {sfWebDebugLogger} Factories 66.55 ms (1)
+Jan 06 07:54:59 symfony [info] {sfWebDebugLogger} Action "article/new" 41.18 ms (1)
+Jan 06 07:54:59 symfony [info] {sfWebDebugLogger} View "Success" for "article/new" 46.04 ms (1)
+Jan 06 07:54:59 symfony [info] {sfWebDebugLogger} Partial "article/_form" 23.79 ms (1)
+Jan 06 07:57:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/new with parameters array (  'module' => 'article',  'action' => 'new',)
+Jan 06 07:57:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:57:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:57:40 symfony [info] {articleActions} Call "articleActions->executeNew()"
+Jan 06 07:57:40 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/newSuccess.php"
+Jan 06 07:57:40 symfony [info] {sfPartialView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/_form.php"
+Jan 06 07:57:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:57:40 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 06 07:57:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT commande.CLIENT_ID, commande.ARTICLE_ID, commande.QUANTITE, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande`
+Jan 06 07:57:40 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:57:40 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:57:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:57:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:57:40 symfony [info] {sfWebDebugLogger} Configuration 12.74 ms (9)
+Jan 06 07:57:40 symfony [info] {sfWebDebugLogger} Factories 43.56 ms (1)
+Jan 06 07:57:40 symfony [info] {sfWebDebugLogger} Action "article/new" 37.88 ms (1)
+Jan 06 07:57:40 symfony [info] {sfWebDebugLogger} View "Success" for "article/new" 67.39 ms (1)
+Jan 06 07:57:40 symfony [info] {sfWebDebugLogger} Partial "article/_form" 45.11 ms (1)
+Jan 06 07:57:40 symfony [info] {sfWebResponse} Send content (37825 o)
+Jan 06 07:58:20 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /article with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 06 07:58:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 06 07:58:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:58:20 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 06 07:58:20 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.0 MB | mempeak:    5.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 06 07:58:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    5.3 MB | mempeak:    5.3 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 06 07:58:20 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 06 07:58:20 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:58:20 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:58:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 06 07:58:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 06 07:58:20 symfony [info] {sfWebDebugLogger} Configuration 14.99 ms (9)
+Jan 06 07:58:20 symfony [info] {sfWebDebugLogger} Factories 59.82 ms (1)
+Jan 06 07:58:20 symfony [info] {sfWebDebugLogger} Action "article/index" 27.33 ms (1)
+Jan 06 07:58:20 symfony [info] {sfWebDebugLogger} View "Success" for "article/index" 18.61 ms (1)
+Jan 06 07:58:20 symfony [info] {sfWebResponse} Send content (30157 o)

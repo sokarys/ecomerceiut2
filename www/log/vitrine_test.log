@@ -64,3 +64,25 @@ Jan 05 13:29:51 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modu
 Jan 05 13:29:51 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
 Jan 05 13:29:51 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
 Jan 05 13:29:51 symfony [info] {sfWebResponse} Send content (730 o)
+Jan 06 07:24:03 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 06 07:24:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/index with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 06 07:24:03 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 06 07:24:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:24:03 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 06 07:24:03 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 06 07:24:03 symfony [debug] {sfPropelLogger} SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 06 07:24:04 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 06 07:24:04 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:24:04 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:24:04 symfony [info] {sfWebResponse} Send content (1009 o)
+Jan 06 07:34:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 06 07:34:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /article/index with parameters array (  'module' => 'article',  'action' => 'index',)
+Jan 06 07:34:00 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jan 06 07:34:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 06 07:34:00 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 06 07:34:00 symfony [debug] {sfPropelLogger} SET NAMES 'utf8'
+Jan 06 07:34:00 symfony [debug] {sfPropelLogger} SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 06 07:34:00 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\modules/article/templates/indexSuccess.php"
+Jan 06 07:34:00 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:34:00 symfony [info] {sfPHPView} Render "C:\wamp\www\apps\vitrine\templates/layout.php"
+Jan 06 07:34:00 symfony [info] {sfWebResponse} Send content (1009 o)
