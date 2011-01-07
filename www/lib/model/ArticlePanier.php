@@ -9,11 +9,12 @@
  *
  * @author sokarys
  */
-class ArticlePanier extends Article{
+class ArticlePanier{
+    private $article;
     private $quantite;
 
     function setArticle(Article $a, $quantite){
-        Article::$this = $a;
+        $article = $a;
         $this->quantite = $quantite;
     }
 
@@ -22,11 +23,11 @@ class ArticlePanier extends Article{
     }
 
     function  getPrix() {
-        return parent::getPrix()*$quantite;
+        return $this->article.getPrix() * $quantite;
     }
 
     public function __toString() {
-        parent::__toString() + " * " + $this->quantite;
+        $this->article + " * " + $this->quantite;
     }
 }
 ?>
