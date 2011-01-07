@@ -19,8 +19,14 @@ class Panier {
 
     }
 
+    public function addNewArticle(Article $a, $quantite){
+        $art = new ArticlePanier();
+        $art->setArticle($a, $quantite);
+        $this->articles[] = $art;
+    }
+
     public function addArticle(ArticlePanier $a){
-        $this->articles
+        $this->articles[] = $a;
     }
 
     public function delArticle($index){
@@ -54,12 +60,14 @@ class Panier {
     public function DelleteAll(){
        $this->articles = array();
     }
+
+    
     public function toCommande(){
 
     }
 
     public function __toString() {
-
+        
     }
 }
 ?>
