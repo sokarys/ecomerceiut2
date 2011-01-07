@@ -17,6 +17,7 @@
  * @package    lib.model
  */
 class Article extends BaseArticle {
+
     public function __toString(){
         return $this->getPeer();
     }

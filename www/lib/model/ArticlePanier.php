@@ -13,24 +13,34 @@ class ArticlePanier{
     private $article;
     private $quantite;
 
-    function setArticle(Article $a, $quantite){
-        $article = $a;
+    public function __construct() {
+        $article = new Article();
+    }
+
+    public function setArticle(Article $art, $quantite){
+        $article = $art;
+        print_r($art);
+        print_r($art);
         $this->quantite = $quantite;
     }
 
-    function getQuantite(){
+    public function getQuantite(){
         return $this->quantite;
     }
 
-    function  getPrix() {
-        return $this->article.getPrix() * $quantite;
+    public function getPrix() {
+        return  $this->article->getPrix() * $this->quantite;
     }
 
-    function addQuantite($qt){
+    public function addQuantite($qt){
         $this->setQuantite($this->quantite + $qt);
     }
 
-    function setQuantite($qt){
+    public function getNom(){
+        return "gelee"; //$this->article->getNom();
+    }
+
+    public function setQuantite($qt){
         if($qt>=0 ){
             if($qt > $article->getStock()){
                 $this->quantite = $article->getStock();

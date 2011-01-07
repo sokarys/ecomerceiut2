@@ -22,7 +22,7 @@ class Panier {
     public function addNewArticle(Article $a, $quantite){
         $art = new ArticlePanier();
         $art->setArticle($a, $quantite);
-        $this->addArticle($art,$quantite);
+        return $this->addArticle($art);
     }
 
     public function addArticle(ArticlePanier $a){
@@ -31,8 +31,10 @@ class Panier {
             return true;
         }else{
             $act = $this->getArticle($a->getNom());
+            print_r($act);
             if($act == NULL){
                 $this->articles[] = $a;
+              //  print_r($this->articles);
                 return true;
             }else{
                 $act->setQuantite($a->getQuantite());
