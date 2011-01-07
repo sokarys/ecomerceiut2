@@ -19,7 +19,7 @@ class Panier {
 
     }
 
-    public function addArticle(Article $a){
+    public function addArticle(ArticlePanier $a){
         $this->articles
     }
 
@@ -28,13 +28,29 @@ class Panier {
     }
 
     public function nbTotalArticle(){
+        $nbArt = 0;
+        foreach ( $this->articles as $article) {
+           $quantite = $article->getQuantite();
+           $nbArt += $quantite;
+        }
+           return $nbArt;
+    }
 
+    public function getPrixTotal(){
+        $prix = 0.0;
+        foreach ( $this->articles as $article) {
+           $prix += $article->getPrix();
+        }
+           return $prix;
     }
 
     
     public function afficherPanier(){
-        
+        foreach( $this->articles as $a){
+            print $a;
+        }
     }
+    
     public function DelleteAll(){
        $this->articles = array();
     }
