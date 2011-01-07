@@ -12,8 +12,7 @@
 class Panier {
     private $articles= array();
 
-    public function __construct() {
-
+    public function __construct() {       
     }
 
     public function __destruct() {
@@ -21,7 +20,7 @@ class Panier {
     }
 
     public function addArticle(Article $a){
-
+        $this->articles
     }
 
     public function delArticle($index){
