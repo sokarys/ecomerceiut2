@@ -24,5 +24,9 @@ class ArticlePanier extends Article{
     function  getPrix() {
         return parent::getPrix()*$quantite;
     }
+
+    public function __toString() {
+        parent::__toString() + " * " + $this->quantite;
+    }
 }
 ?>
