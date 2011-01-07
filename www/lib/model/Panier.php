@@ -47,7 +47,7 @@ class Panier {
     
     public function afficherPanier(){
         foreach( $this->articles as $a){
-            print $a;
+            echo( $a+"<br/>");
         }
     }
     
