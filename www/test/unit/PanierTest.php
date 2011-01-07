@@ -16,7 +16,7 @@ $t->diag('Panier()');
 $t->isa_ok(new Panier(), 'Panier', 'new Panier crée des objets de la bonne classe');
 
 $t->diag('addArticle()');
-$t->isa_ok($p->addNewArticle($a,1), 'null','Panier() renvoie rien');
+$t->isa_ok($p->addNewArticle($a,1), 'NULL','Panier() renvoie rien');
 
-$t->i
+$t->is($p->nbTotalArticle(), 1, 'Nombre article correct');
 ?>
