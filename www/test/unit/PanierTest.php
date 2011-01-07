@@ -12,7 +12,10 @@ $t = new lime_test(10, new lime_output_color()); // on s'apprête à faire 10 te
 // commencer ici les tests sur vos objets métier
 $p = new Panier();
 $a = new Article();
+$t->diag('Panier()');
+$t->isa_ok(new Panier(), 'Panier', 'new Panier crée des objets de la bonne classe');
+
 $t->diag('addArticle()');
-$t->isa_ok($p->addNewArticle($a,1), 'void','Panier() renvoie rien');
+$t->isa_ok($p->addNewArticle($a,1), 'null','Panier() renvoie rien');
 
 ?>
