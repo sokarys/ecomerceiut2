@@ -10,7 +10,7 @@
  * @author Michael
  */
 class Panier {
-    private $articles= array();
+    private $articles = array();
 
     public function __construct() {       
     }
@@ -22,11 +22,25 @@ class Panier {
     public function addNewArticle(Article $a, $quantite){
         $art = new ArticlePanier();
         $art->setArticle($a, $quantite);
-        $this->articles[] = $art;
+        $this->addArticle($art,$quantite);
     }
 
     public function addArticle(ArticlePanier $a){
-        $this->articles[] = $a;
+        if(count($this->articles) == 0){
+            $this->articles[] = $a;
+            return true;
+        }else{
+            $act = $this->getArticle($a->getNom());
+            if($act == NULL){
+                $this->articles[] = $a;
+                return true;
+            }else{
+                $act->setQuantite($a->getQuantite());
+                return true;
+            }
+
+        }
+        return false;
     }
 
     public function delArticle($index){
@@ -61,6 +75,14 @@ class Panier {
        $this->articles = array();
     }
 
+    public function getArticle($nomArticle){
+        foreach ($this->articles as $art){
+            if( strcmp($art->getNom() , $nomArticle) == 0){
+                return $art;
+            }
+        }
+        return NULL;
+    }
     
     public function toCommande(){
 
