@@ -26,8 +26,20 @@ class ArticlePanier{
         return $this->article.getPrix() * $quantite;
     }
 
-    function test(){
-        
+    function addQuantite($qt){
+        $this->setQuantite($this->quantite + $qt);
+    }
+
+    function setQuantite($qt){
+        if($qt>=0 ){
+            if($qt > $article->getStock()){
+                $this->quantite = $article->getStock();
+            }else {
+                $this->quantite = $qt;
+            }
+        }else{
+            $this->quantite = 0 ;
+        }
     }
 
     public function __toString() {
