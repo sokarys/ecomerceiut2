@@ -18,4 +18,5 @@ $t->isa_ok(new Panier(), 'Panier', 'new Panier crée des objets de la bonne clas
 $t->diag('addArticle()');
 $t->isa_ok($p->addNewArticle($a,1), 'null','Panier() renvoie rien');
 
+$t->i
 ?>
