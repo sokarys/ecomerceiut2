@@ -26,6 +26,10 @@ class ArticlePanier{
         return $this->article.getPrix() * $quantite;
     }
 
+    function test(){
+        
+    }
+
     public function __toString() {
         $this->article + " * " + $this->quantite;
     }
