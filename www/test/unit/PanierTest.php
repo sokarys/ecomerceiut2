@@ -11,7 +11,14 @@ new sfDatabaseManager(ProjectConfiguration::getApplicationConfiguration('vitrine
 $t = new lime_test(10, new lime_output_color()); // on s'apprête à faire 10 tests
 // commencer ici les tests sur vos objets métier
 $p = new Panier();
+
 $a = new Article();
+$a->setNom("Reve Gourmand");
+$a->setPrix(50.1);
+$a->setDescription("Reve ou l'on bouf bien!");
+$a->setPopularite(0);
+$a->setStock(10);
+
 $t->diag('Panier()');
 $t->isa_ok(new Panier(), 'Panier', 'new Panier crée des objets de la bonne classe');
 
