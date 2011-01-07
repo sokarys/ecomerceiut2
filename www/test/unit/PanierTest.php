@@ -12,6 +12,8 @@ new sfDatabaseManager(ProjectConfiguration::getApplicationConfiguration('vitrine
 $t = new lime_test(10, new lime_output_color()); // on s'apprête à faire 10 tests
 // commencer ici les tests sur vos objets métier
 $p = new Panier();
-
+$a = new Article();
+$t->diag('addArticle()');
+$t->isa_ok($p->addArticle($a), 'void','Panier() renvoie rien');
 
 ?>
