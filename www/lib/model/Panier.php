@@ -9,6 +9,7 @@
  *
  * @author Michael
  */
+include("Article.php");
 class Panier {
     private $articles = array();
 
