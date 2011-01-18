@@ -1,10 +1,6 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $Article->getId() ?></td>
-    </tr>
-    <tr>
       <th>Nom:</th>
       <td><?php echo $Article->getNom() ?></td>
     </tr>
@@ -32,7 +28,3 @@
 </table>
 
 <hr />
-
-<a href="<?php echo url_for('article/edit?id='.$Article->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('article/index') ?>">List</a>

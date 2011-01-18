@@ -1,9 +1,8 @@
-<h1>Articles List</h1>
+<h1>Liste des articles de notre catégorie</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Nom</th>
       <th>Prix</th>
       <th>Description</th>
@@ -15,8 +14,7 @@
   <tbody>
     <?php foreach ($Articles as $Article): ?>
     <tr>
-      <td><a href="<?php echo url_for('article/show?id='.$Article->getId()) ?>"><?php echo $Article->getId() ?></a></td>
-      <td><?php echo $Article->getNom() ?></td>
+      <td><a href="<?php echo url_for('article/show?id='.$Article->getId()) ?>"><?php echo $Article->getNom() ?></a></td>
       <td><?php echo $Article->getPrix() ?></td>
       <td><?php echo $Article->getDescription() ?></td>
       <td><?php echo $Article->getPopularite() ?></td>
@@ -26,5 +24,3 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
-  <a href="<?php echo url_for('article/new') ?>">New</a>

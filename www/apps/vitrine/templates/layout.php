@@ -15,7 +15,7 @@
       </div>
       <div>
           <h3>menu</h3>
-          Les articles
+          <a href="<?php echo url_for('categorie/index') ?>">Les catégories d'articles</a>
           Mon panier
           Mon profil
       </div>
