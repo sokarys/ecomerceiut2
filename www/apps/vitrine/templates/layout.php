@@ -9,6 +9,17 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+      <div style="text-align:center;">
+          <h1>Bienvenue sur dreamland</h1><br/>
+          <p>Le site qui vend du rêve</p>
+      </div>
+      <div>
+          <h3>menu</h3>
+          Les articles
+          Mon panier
+          Mon profil
+      </div>
+
     <?php echo $sf_content ?>
   </body>
 </html>

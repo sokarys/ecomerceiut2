@@ -9,18 +9,26 @@
  *
  * @author sokarys
  */
+
+include_once("Article.php");
+
 class ArticlePanier{
     private $article;
     private $quantite;
 
-    public function __construct() {
-        $article = new Article();
+    public function __construct(Article $art, $quantite) {
+        $this->setArticle($art, $quantite);
+    }
+
+    public function getArticle(){
+        return $this->article;
+    }
+    public function getStock(){
+        return $this->getArticle()->getStock();
     }
 
     public function setArticle(Article $art, $quantite){
-        $article = $art;
-        print_r($art);
-        print_r($art);
+        $this->article = $art;
         $this->quantite = $quantite;
     }
 
@@ -29,7 +37,7 @@ class ArticlePanier{
     }
 
     public function getPrix() {
-        return  $this->article->getPrix() * $this->quantite;
+        return $this->article->getPrix() * $this->quantite;
     }
 
     public function addQuantite($qt){
@@ -37,13 +45,13 @@ class ArticlePanier{
     }
 
     public function getNom(){
-        return "gelee"; //$this->article->getNom();
+        return $this->article->getNom();
     }
 
     public function setQuantite($qt){
         if($qt>=0 ){
-            if($qt > $article->getStock()){
-                $this->quantite = $article->getStock();
+            if($qt > $this->article->getStock()){
+                $this->quantite = $this->article->getStock();
             }else {
                 $this->quantite = $qt;
             }

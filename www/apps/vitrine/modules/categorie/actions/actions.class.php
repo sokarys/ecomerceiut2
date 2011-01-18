@@ -11,7 +11,7 @@ class categorieActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->Categories = CategoriePeer::doSelect(new Criteria());
+    $this->Categories = CategoriePeer::doSelect($c);
   }
 
   public function executeShow(sfWebRequest $request)

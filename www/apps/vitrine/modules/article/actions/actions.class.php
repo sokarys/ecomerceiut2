@@ -11,7 +11,13 @@ class articleActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->Articles = ArticlePeer::doSelect(new Criteria());
+    $c = new Criteria();
+    
+    if($request->hasParameter("categorie_id")){
+        $c->add(ArticlePeer::CATEGORIE_ID, $request->getParameter("categorie_id"));
+    }
+    
+    $this->Articles = ArticlePeer::doSelect($c);
   }
 
   public function executeShow(sfWebRequest $request)
