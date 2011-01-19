@@ -16,8 +16,6 @@
     <?php foreach ($Commandes as $Commande): ?>
     <tr>
       <td><?php echo $Commande->getClientId() ?></td>
-      <td><?php echo $Commande->getArticleId() ?></td>
-      <td><?php echo $Commande->getQuantite() ?></td>
       <td><?php echo $Commande->getPrix() ?></td>
       <td><?php echo $Commande->getCreatedAt() ?></td>
       <td><?php echo $Commande->getEtat() ?></td>

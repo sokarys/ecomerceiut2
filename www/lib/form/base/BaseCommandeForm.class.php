@@ -15,8 +15,6 @@ abstract class BaseCommandeForm extends BaseFormPropel
   {
     $this->setWidgets(array(
       'client_id'           => new sfWidgetFormPropelChoice(array('model' => 'Client', 'add_empty' => true)),
-      'article_id'          => new sfWidgetFormPropelChoice(array('model' => 'Article', 'add_empty' => true)),
-      'quantite'            => new sfWidgetFormInputText(),
       'created_at'          => new sfWidgetFormDateTime(),
       'etat'                => new sfWidgetFormInputText(),
       'id'                  => new sfWidgetFormInputHidden(),
@@ -25,8 +23,6 @@ abstract class BaseCommandeForm extends BaseFormPropel
 
     $this->setValidators(array(
       'client_id'           => new sfValidatorPropelChoice(array('model' => 'Client', 'column' => 'id', 'required' => false)),
-      'article_id'          => new sfValidatorPropelChoice(array('model' => 'Article', 'column' => 'id', 'required' => false)),
-      'quantite'            => new sfValidatorInteger(array('min' => -2147483648, 'max' => 2147483647, 'required' => false)),
       'created_at'          => new sfValidatorDateTime(array('required' => false)),
       'etat'                => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'id'                  => new sfValidatorChoice(array('choices' => array($this->getObject()->getId()), 'empty_value' => $this->getObject()->getId(), 'required' => false)),

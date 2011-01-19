@@ -20,7 +20,7 @@ class Commande extends BaseCommande {
     public function __toString(){
         return $this->getId();
     }
-    public function getTotal(){
+    public function getPrix(){
         $total =0;
         $c = new criteria();
         $c->add(LigneCommandePeer::COMMANDE_ID,$this->getId());

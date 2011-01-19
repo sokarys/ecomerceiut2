@@ -12,17 +12,19 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($Clients as $Client): ?>
-    <tr>
-      <td><a href="<?php echo url_for('client/show?id='.$Client->getId()) ?>"><?php echo $Client->getId() ?></a></td>
-      <td><?php echo $Client->getNom() ?></td>
-      <td><?php echo $Client->getPrenom() ?></td>
-      <td><?php echo $Client->getAdresse() ?></td>
-      <td><?php echo $Client->getMail() ?></td>
-      <td><?php echo $Client->getTelephone() ?></td>
-    </tr>
-    <?php endforeach; ?>
+      <?php //if($sf_user->hasAttribute('client')){
+          //$Client = $sf_user->getAttribute('client');?>
+           <tr>
+              <td><?php echo $client->getNom() ?></td>
+              <td><?php echo $client->getPrenom() ?></td>
+              <td><?php echo $client->getAdresse() ?></td>
+              <td><?php echo $client->getMail() ?></td>
+              <td><?php echo $client->getTelephone() ?></td>
+            </tr>
+            Commande : <?php echo count($client->getCommandes()) ?>
+     <?php //} ?>
   </tbody>
+  
 </table>
 
   <a href="<?php echo url_for('client/new') ?>">New</a>

@@ -40,11 +40,7 @@ class ArticlePanier{
         return $this->article->getPrix() * $this->quantite;
     }
 
-    public function addQuantite($qt){
-        $this->setQuantite($this->quantite + $qt);
-    }
-
-    public function getNom(){
+      public function getNom(){
         return $this->article->getNom();
     }
 
@@ -52,11 +48,14 @@ class ArticlePanier{
         if($qt>=0 ){
             if($qt > $this->article->getStock()){
                 $this->quantite = $this->article->getStock();
+                return true;
             }else {
                 $this->quantite = $qt;
+                return false;
             }
         }else{
             $this->quantite = 0 ;
+            return true;
         }
     }
 

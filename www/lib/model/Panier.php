@@ -19,6 +19,9 @@ class Panier {
          $this->articles = array();
     }
 
+    public function getArticles(){
+        return $this->articles;
+    }
 
     public function addNewArticle(Article $a, $quantite){
         $art = new ArticlePanier($a, $quantite);
@@ -26,12 +29,14 @@ class Panier {
     }
 
     public function addArticlePanier(ArticlePanier $a){
-
-         if (array_key_exists($a->getArticle()->getId(),$this->articles)){
-            $this->articles[$a->getArticle()->getId()]->addQuantite($a->getQuantite());
+         if (array_key_exists($a->getArticle()->getId(),$this->articles) && $a->getQuantite()==0){
+            $this->delArticle($a->getArticle()->getId());
+         }else if (array_key_exists($a->getArticle()->getId(),$this->articles)){
+            return $this->articles[$a->getArticle()->getId()]->setQuantite($a->getQuantite());
          } else {
             $this->articles[$a->getArticle()->getId()] = $a;
          }
+         return false;
     }
 
     public function delArticle($idArticle){
@@ -65,24 +70,24 @@ class Panier {
        $this->articles = array();
     }
 
-    public function getArticle($nomArticle){
-        foreach ($this->articles as $art){
-            if( strcmp($art->getNom() , $nomArticle) == 0){
-                return $art;
-            }
-        }
-        return NULL;
+    public function getArticle($idArticle){
+        return $this->articles[$idArticle];
+    }
+
+    public function setQuantiteArticle($idArticle,$quantite){
+        $this->articles[$idArticle];
     }
     
     public function toCommande(Client $client) {
         $commande = new Commande();
         $commande->setClient($client);
-        foreach ($this->contenu as $id => $ligne) {
+        foreach ($this->articles as $a) {
             $ligneCommande = new LigneCommande();
             $ligneCommande->setCommande($commande);
-            $ligneCommande->setArticle($ligne["article"]);
-            $ligneCommande->setQuantite($ligne["quantite"]);
-            $ligneCommande->setPrix($ligne["article"]->getPrix());
+            $ligneCommande->setArticle($a->getArticle());
+            $ligneCommande->setQuantite($a->getQuantite());
+            $ligneCommande->setPrix($a->getPrix());
+            $ligneCommande->save();
         }
         $commande->save();
         $this->DelleteAll();

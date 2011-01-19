@@ -16,8 +16,8 @@
       <div>
           <h3>menu</h3>
           <a href="<?php echo url_for('categorie/index') ?>">Les catégories d'articles</a>
-          Mon panier
-          Mon profil
+          <a href="<?php echo url_for('panier/index') ?>">Panier</a>
+          <a href="<?php echo url_for('client/index') ?>">Mon profil</a>
       </div>
 
     <?php echo $sf_content ?>

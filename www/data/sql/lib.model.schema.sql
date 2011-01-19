@@ -69,8 +69,6 @@ DROP TABLE IF EXISTS `commande`;
 CREATE TABLE `commande`
 (
 	`client_id` INTEGER,
-	`article_id` INTEGER,
-	`quantite` INTEGER,
 	`created_at` DATETIME,
 	`etat` VARCHAR(10) default 'attente',
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
@@ -78,11 +76,7 @@ CREATE TABLE `commande`
 	INDEX `commande_FI_1` (`client_id`),
 	CONSTRAINT `commande_FK_1`
 		FOREIGN KEY (`client_id`)
-		REFERENCES `client` (`id`),
-	INDEX `commande_FI_2` (`article_id`),
-	CONSTRAINT `commande_FK_2`
-		FOREIGN KEY (`article_id`)
-		REFERENCES `article` (`id`)
+		REFERENCES `client` (`id`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------

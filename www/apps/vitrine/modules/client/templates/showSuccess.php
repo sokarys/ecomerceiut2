@@ -29,6 +29,23 @@
 
 <hr />
 
-<a href="<?php echo url_for('client/edit?id='.$Client->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('client/index') ?>">List</a>
+
+    Mes commandes : <br />
+    <table>
+        <tr>
+            <th>Référence</th>
+            <th>Etat</th>
+            <th>Créée</th>
+            <th>Total</th>
+        </tr>
+    <?php foreach($Client->getCommandes() as $commande){ ?>
+        <tr>
+            <td><a href="<?php echo url_for('commande/show?id='.$commande->getId()); ?>" ><?php echo $commande->getId(); ?></a></td>
+            <td><?php echo $commande->getEtat(); ?></td>
+            <td><?php echo $commande->getCreatedAt(); ?></td>
+            <td><?php echo $commande->getPrix(); ?></td>
+        </tr>
+    <?php } ?>
+    </table>
+
+

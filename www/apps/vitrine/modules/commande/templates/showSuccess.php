@@ -5,14 +5,6 @@
       <td><?php echo $Commande->getClientId() ?></td>
     </tr>
     <tr>
-      <th>Article:</th>
-      <td><?php echo $Commande->getArticleId() ?></td>
-    </tr>
-    <tr>
-      <th>Quantite:</th>
-      <td><?php echo $Commande->getQuantite() ?></td>
-    </tr>
-    <tr>
       <th>Prix:</th>
       <td><?php echo $Commande->getPrix() ?></td>
     </tr>

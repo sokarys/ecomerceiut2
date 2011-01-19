@@ -24,8 +24,6 @@ propel:
   commande:
     _attributes: { phpName: Commande }
     client_id:
-    article_id:
-    quantite: { type: integer }
     created_at:
     etat: { type: varchar(10), default: attente }
   ligne_commande:
