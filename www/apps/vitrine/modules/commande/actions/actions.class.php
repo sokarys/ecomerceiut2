@@ -11,7 +11,7 @@ class commandeActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->Commandes = CommandePeer::doSelect(new Criteria());
+        $this->Commandes = CommandePeer::doSelect(new Criteria());
   }
 
   public function executeShow(sfWebRequest $request)

@@ -23,6 +23,7 @@ class clientActions extends sfActions
     if($this->client != null){
         $this->getUser()->setAttribute('client', null);
         $this->getUser()->setAuthenticated(false);
+        $this->getUser()->clearCredentials();
         $this->redirect('categorie/index');
     }else{
         $this->redirect('client/login');

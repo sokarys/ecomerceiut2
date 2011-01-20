@@ -18,4 +18,7 @@
  */
 class ArticlePeer extends BaseArticlePeer {
 
+    public function __toString() {
+        return "";
+    }
 } // ArticlePeer

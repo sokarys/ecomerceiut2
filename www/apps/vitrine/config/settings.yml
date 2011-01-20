@@ -23,6 +23,15 @@ test:
     etag:                   false
 
 all:
+  .actions:
+    login_module:           client
+
+    login_action:           login
+
+    secure_module:          client
+
+    secure_action:          index
+
   .settings:
     # Form security secret (CSRF protection)
     csrf_secret:            Unique$ecret
