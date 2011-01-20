@@ -9,9 +9,27 @@
  */
 class lignecommandeActions extends sfActions
 {
+
+      private function getClient(){
+      if($this->getUser()->hasAttribute('client')){
+          return $this->getUser()->getAttribute('client');
+      }
+
+      return null;
+  }
+  
   public function executeIndex(sfWebRequest $request)
   {
-    $this->LigneCommandes = LigneCommandePeer::doSelect(new Criteria());
+    $client = $this->getClient();
+    if($client != null){
+        $c = new Criteria();
+        if($request->hasParameter('id')){
+            $c->add(LigneCommandePeer::COMMANDE_ID,$request->getParameter('id'));
+        }
+        $this->LigneCommandes = LigneCommandePeer::doSelect($c);
+    }else{
+        $this->redirect('client/login');
+    }
   }
 
   public function executeShow(sfWebRequest $request)

@@ -7,6 +7,11 @@
       <th>Prix Unitaire</th>
       <th>Quantité</th>
       <th>Prix Total</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>

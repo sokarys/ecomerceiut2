@@ -21,4 +21,5 @@ class LigneCommande extends BaseLigneCommande {
     public function __toString(){
         return $this->getArticle()->getNom();
     }
+
 } // LigneCommande

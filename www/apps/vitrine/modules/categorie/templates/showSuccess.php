@@ -15,8 +15,3 @@
   </tbody>
 </table>
 
-<hr />
-
-<a href="<?php echo url_for('categorie/edit?id='.$Categorie->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('categorie/index') ?>">List</a>

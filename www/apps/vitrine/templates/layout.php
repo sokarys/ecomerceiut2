@@ -5,6 +5,7 @@
     <?php include_metas() ?>
     <?php include_title() ?>
     <link rel="shortcut icon" href="/favicon.ico" />
+    <?php stylesheet_tag('style') ?>
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
@@ -18,6 +19,16 @@
           <a href="<?php echo url_for('categorie/index') ?>">Les catégories d'articles</a>
           <a href="<?php echo url_for('panier/index') ?>">Panier</a>
           <a href="<?php echo url_for('client/index') ?>">Mon profil</a>
+          <?php if($sf_user->hasAttribute('client')){ ?>
+          <?php     if($sf_user->getAttribute('client') != null){?>
+                    <a href="<?php echo url_for('client/deconnection') ?>">Déconnection</a>
+               <?php }else{?>
+                    <a href="<?php echo url_for('client/login') ?>">Connection</a>
+               <?php }?>
+           <?php }else {?>
+                    <a href="<?php echo url_for('client/login') ?>">Connection</a>
+           <?php }?>
+          
       </div>
 
     <?php echo $sf_content ?>

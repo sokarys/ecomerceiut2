@@ -12,46 +12,51 @@ class clientActions extends sfActions
 
       private function getClient(){
       if($this->getUser()->hasAttribute('client')){
-          //$this->getUser()->setAttribute('client', $this->getUser()->getAttribute('client'));
           return $this->getUser()->getAttribute('client');
       }
       
       return null;
   }
+
+  public function executeDeconnection(sfWebRequest $request){
+    $this->client = $this->getClient();
+    if($this->client != null){
+        $this->getUser()->setAttribute('client', null);
+        $this->getUser()->setAuthenticated(false);
+        $this->redirect('categorie/index');
+    }else{
+        $this->redirect('client/login');
+    }
+  }
   
   public function executeIndex(sfWebRequest $request)
   {
     $this->client = $this->getClient();
-        
 
     if($this->client != null){
         $this->redirect('client/show?id='.$this->client->getId());
     }else{
         $this->redirect('client/login');
     }
-    //$this->Clients = ClientPeer::doSelect(new Criteria());
   }
 
-  public function executeDisconect(sfWebRequest $request){
-      
-  }
-
+  
   public function executeShow(sfWebRequest $request)
   {
-    $this->Client = ClientPeer::retrieveByPk($request->getParameter('id'));
-    //$this->Client = $this->getClient();
-    //print_r($this->Client);
-    //$this->client = $this->getUser()->getAttribute('client');
-    //$request->setAttribute('client', $this->Client);
-    $this->forward404Unless($this->Client);
+      $client = $this->getClient();
+      if($client != null){
+        $this->Client = $client;
+        $this->forward404Unless($this->Client);
+      }else{
+          $this->redirect('client/login');
+      }
   }
   
   public function executeLogin(sfWebRequest $request) {
    
       
        if($this->getUser()->hasAttribute('client')){
-            //$request->setParameter('id', $request->getAttribute('client')->getId());
-           if($this->getUser()->getAttribute('client')->getId() != -1){
+           if($this->getUser()->getAttribute('client') != null){
                 $this->getUser()->setAttribute('client', $this->getUser()->getAttribute('client'));
                 $this->redirect('client/show?id='.$this->getUser()->getAttribute('client')->getId());
            }
@@ -71,7 +76,6 @@ class clientActions extends sfActions
             $this->getUser()->setAuthenticated(true);
             $this->getUser()->setAttribute('client', $client);
             $this->redirect('client/show?id='.$client->getId());
-            //$this->setTemplate('show');
         }
 
       }else{

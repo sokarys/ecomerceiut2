@@ -1,0 +1,96 @@
+/*
+    Document   : gestion
+    Created on : 1 déc. 2010, 22:19:14
+    Author     : Michael
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root {
+
+}
+
+body{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    width:100%;
+    background-image:url('../images/background.jpg');
+    color:#fcefa1;
+}
+table{
+background-color:transparent;
+border:3px solid #003366;
+-moz-border-radius:15px 15px 15px 15px;
+margin-top: 10px;
+margin-left:auto;
+margin-right:auto;
+border-spacing: 0;
+}
+table td{
+    background-color:transparent;
+    padding:5px;
+}
+table tr{
+    border-bottom:2px solid #003366;
+    padding:4px;
+}
+table th{
+     padding:9px;
+     border-bottom:3px solid #003366;
+}
+
+.titre_etudiant{
+   -moz-border-radius:15px 15px 15px 15px;
+    border:3px solid #003366;
+    margin:5px 0 26px 112px;
+    padding:7px;
+    width:-moz-max-content;
+    font-size:23px;
+    text-align:left;
+}
+#menu{
+    float:left;
+    -moz-border-radius:15px 15px 15px 15px;
+     border:3px solid #003366;
+     padding:10px;
+     margin-left:10%;
+}
+#corps{
+    float:left;
+    width:67%;
+    margin-left:auto;
+    margin-right:auto;
+}
+#footer{
+   float:right;
+}
+h1{
+    color:#FFCC66;
+}
+a{
+    color:#fbcb09;
+}
+a:hover{
+    color: #fcefa1;
+}
+img{
+    border: none;
+}
+#groupe{
+-moz-border-radius:15px 15px 15px 15px;
+border:3px solid #003366;
+margin-left:auto;
+margin-right:auto;
+padding:10px;
+width:-moz-max-content;
+}
+
+#title_menu{
+
+}

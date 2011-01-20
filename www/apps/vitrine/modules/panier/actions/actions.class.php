@@ -35,13 +35,10 @@ class panierActions extends sfActions
 
   private function getClient(){
       if($this->getUser()->hasAttribute('client')){
-          //$this->getUser()->setAttribute('client', $this->getUser()->getAttribute('client'));
           return $this->getUser()->getAttribute('client');
       }
       
-      $client = new Client();
-      $client->setId(-1);
-      return $client;
+      return null;
   }
   
   
@@ -84,7 +81,7 @@ class panierActions extends sfActions
         $panier = $this->getPanier();
         if($panier->nbTotalArticle()!=0){
             $client = $this->getClient();
-            if($client->getId() != -1){
+            if($client != null){
                 $commande = $panier->toCommande($client);
             }else{
                 $this->redirect('client/index');

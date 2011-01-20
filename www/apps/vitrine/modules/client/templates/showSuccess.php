@@ -1,27 +1,20 @@
 <table>
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Adresse</th>
+        <th>Mail</th>
+        <th>Telephone</th>
+    </tr>
+    </thead>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $Client->getId() ?></td>
-    </tr>
-    <tr>
-      <th>Nom:</th>
+      
       <td><?php echo $Client->getNom() ?></td>
-    </tr>
-    <tr>
-      <th>Prenom:</th>
       <td><?php echo $Client->getPrenom() ?></td>
-    </tr>
-    <tr>
-      <th>Adresse:</th>
       <td><?php echo $Client->getAdresse() ?></td>
-    </tr>
-    <tr>
-      <th>Mail:</th>
       <td><?php echo $Client->getMail() ?></td>
-    </tr>
-    <tr>
-      <th>Telephone:</th>
       <td><?php echo $Client->getTelephone() ?></td>
     </tr>
   </tbody>
@@ -40,7 +33,7 @@
         </tr>
     <?php foreach($Client->getCommandes() as $commande){ ?>
         <tr>
-            <td><a href="<?php echo url_for('commande/show?id='.$commande->getId()); ?>" ><?php echo $commande->getId(); ?></a></td>
+            <td><a href="<?php echo url_for('lignecommande/index?id='.$commande->getId()); ?>" ><?php echo $commande->getId(); ?></a></td>
             <td><?php echo $commande->getEtat(); ?></td>
             <td><?php echo $commande->getCreatedAt(); ?></td>
             <td><?php echo $commande->getPrix(); ?></td>
