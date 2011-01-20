@@ -6460,3 +6460,930 @@ Jan 20 11:04:27 symfony [info] {sfWebDebugLogger} Factories 23.90 ms (1)
 Jan 20 11:04:27 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
 Jan 20 11:04:27 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.75 ms (1)
 Jan 20 11:04:27 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:26 symfony [info] {sfPatternRouting} Match route "categorie" (/categorie.:sf_format) for /categorie with parameters array (  'module' => 'categorie',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:26 symfony [info] {sfBasicSecurityFilter} Action "categorie/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:26 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:13:26 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Configuration 1.61 ms (13)
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Factories 24.35 ms (1)
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.22 ms (1)
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:13:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:26 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:26 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:26 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:26 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Configuration 1.05 ms (9)
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Factories 25.90 ms (1)
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:13:26 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.21 ms (1)
+Jan 20 11:13:26 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:27 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfBasicSecurityFilter} Action "commande/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:27 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:13:27 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Configuration 1.62 ms (13)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Factories 24.70 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.19 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:13:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:27 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Configuration 1.08 ms (9)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Factories 25.00 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.11 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:27 symfony [info] {sfPatternRouting} Match route "article" (/article.:sf_format) for /article with parameters array (  'module' => 'article',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfBasicSecurityFilter} Action "article/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:27 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:13:27 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (13)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Factories 24.42 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.22 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:13:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:27 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:27 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (9)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Factories 25.35 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.54 ms (1)
+Jan 20 11:13:27 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:28 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:28 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:28 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:28 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:28 symfony [info] {sfWebDebugLogger} Configuration 1.05 ms (9)
+Jan 20 11:13:28 symfony [info] {sfWebDebugLogger} Factories 24.12 ms (1)
+Jan 20 11:13:28 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:13:28 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.86 ms (1)
+Jan 20 11:13:28 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:29 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/login with parameters array (  'module' => 'securite',  'action' => 'login',)
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:29 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:13:29 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (8)
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Factories 25.00 ms (1)
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.33 ms (1)
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:13:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:29 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:29 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:29 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:29 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (9)
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Factories 24.60 ms (1)
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:13:29 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.67 ms (1)
+Jan 20 11:13:29 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:13:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/login with parameters array (  'module' => 'securite',  'action' => 'login',)
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:33 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:13:33 symfony [info] {myUser} User is authenticated
+Jan 20 11:13:33 symfony [info] {myUser} Add credential(s) "admin"
+Jan 20 11:13:33 symfony [info] {securiteActions} Forward to action "categorie/index"
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:33 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 20 11:13:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:13:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `categorie`
+Jan 20 11:13:33 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/indexSuccess.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_assets.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_flashes.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_header.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_th_tabular.php"
+Jan 20 11:13:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:33 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie` LIMIT 20
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_batch_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_actions.php"
+Jan 20 11:13:33 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_footer.php"
+Jan 20 11:13:33 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:33 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (14)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Factories 25.56 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Action "securite/login" 56.50 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Action "categorie/index" 20.74 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/index" 30.90 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_assets" 0.39 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_flashes" 0.38 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_header" 0.34 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters" 5.93 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters_field" 2.56 ms (2)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list" 10.54 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_th_tabular" 1.39 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_batch_actions" 0.95 ms (2)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_tabular" 2.12 ms (2)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_actions" 2.69 ms (2)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_batch_actions" 0.78 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_actions" 0.47 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_footer" 0.35 ms (1)
+Jan 20 11:13:33 symfony [info] {sfWebResponse} Send content (71463 o)
+Jan 20 11:13:35 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:13:35 symfony [notice] {sfWebDebugLogger}  Notice at /var/www/site/tc5/symfony-1.4.8/lib/storage/sfSessionStorage.class.php on line 93 (session_start(): ps_files_cleanup_dir: opendir(/var/lib/php5) failed: Permission denied (13))
+Jan 20 11:13:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:35 symfony [info] {commandeActions} Call "commandeActions->executeIndex()"
+Jan 20 11:13:35 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.3 MB | mempeak:    7.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:13:35 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `commande`
+Jan 20 11:13:35 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/indexSuccess.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_assets.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_flashes.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_header.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:13:35 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SELECT client.ID, client.NOM, client.PRENOM, client.ADRESSE, client.MAIL, client.TELEPHONE FROM `client`
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:13:35 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list.php"
+Jan 20 11:13:35 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_th_tabular.php"
+Jan 20 11:13:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:36 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT commande.CLIENT_ID, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande` LIMIT 20
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_batch_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_actions.php"
+Jan 20 11:13:36 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_footer.php"
+Jan 20 11:13:36 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:36 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Configuration 1.29 ms (11)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Factories 24.28 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Action "commande/index" 25.15 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} View "Success" for "commande/index" 59.35 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_assets" 0.48 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_flashes" 0.43 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_header" 0.38 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_filters" 22.52 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_filters_field" 17.68 ms (4)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list" 21.57 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_th_tabular" 2.01 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_batch_actions" 1.26 ms (3)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_tabular" 10.51 ms (3)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_actions" 3.98 ms (3)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_batch_actions" 0.75 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_actions" 0.47 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebDebugLogger} Partial "commande/_list_footer" 0.34 ms (1)
+Jan 20 11:13:36 symfony [info] {sfWebResponse} Send content (88998 o)
+Jan 20 11:13:38 symfony [info] {sfPatternRouting} Match route "article" (/article.:sf_format) for /article with parameters array (  'module' => 'article',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:13:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:38 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 20 11:13:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:13:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.3 MB | mempeak:    7.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `article`
+Jan 20 11:13:38 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/indexSuccess.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_assets.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_flashes.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_header.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.5 MB | mempeak:    8.5 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:13:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SELECT commande.CLIENT_ID, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande`
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_th_tabular.php"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:13:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article` LIMIT 20
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_batch_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_tabular.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_batch_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_tabular.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_batch_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_actions.php"
+Jan 20 11:13:38 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_footer.php"
+Jan 20 11:13:38 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:38 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (11)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Factories 23.93 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Action "article/index" 23.12 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} View "Success" for "article/index" 49.61 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_assets" 0.45 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_flashes" 0.44 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_header" 0.38 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_filters" 24.25 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_filters_field" 17.82 ms (7)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list" 10.80 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_th_tabular" 2.86 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_batch_actions" 0.85 ms (2)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_tabular" 1.31 ms (2)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_actions" 2.40 ms (2)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_batch_actions" 0.73 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_actions" 0.47 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebDebugLogger} Partial "article/_list_footer" 0.35 ms (1)
+Jan 20 11:13:38 symfony [info] {sfWebResponse} Send content (98100 o)
+Jan 20 11:13:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/deconnection with parameters array (  'module' => 'securite',  'action' => 'deconnection',)
+Jan 20 11:13:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:41 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:41 symfony [info] {securiteActions} Call "securiteActions->executeDeconnection()"
+Jan 20 11:13:41 symfony [info] {myUser} User is not authenticated
+Jan 20 11:13:41 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:13:41 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:13:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:41 symfony [info] {sfWebDebugLogger} Configuration 0.93 ms (8)
+Jan 20 11:13:41 symfony [info] {sfWebDebugLogger} Factories 24.87 ms (1)
+Jan 20 11:13:41 symfony [info] {sfWebDebugLogger} Action "securite/deconnection" 1.42 ms (1)
+Jan 20 11:13:41 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:13:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:42 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:42 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:42 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:42 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:42 symfony [info] {sfWebDebugLogger} Configuration 1.07 ms (9)
+Jan 20 11:13:42 symfony [info] {sfWebDebugLogger} Factories 24.50 ms (1)
+Jan 20 11:13:42 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:13:42 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.80 ms (1)
+Jan 20 11:13:42 symfony [info] {sfWebResponse} Send content (28570 o)
+Jan 20 11:13:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:13:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:13:45 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:13:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:13:45 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:13:45 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:13:45 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:45 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:13:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:13:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:13:45 symfony [info] {sfWebDebugLogger} Configuration 1.08 ms (9)
+Jan 20 11:13:45 symfony [info] {sfWebDebugLogger} Factories 24.77 ms (1)
+Jan 20 11:13:45 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:13:45 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.72 ms (1)
+Jan 20 11:13:45 symfony [info] {sfWebResponse} Send content (28571 o)
+Jan 20 11:43:22 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:22 symfony [info] {sfBasicSecurityFilter} Action "default/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:22 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:43:22 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Configuration 1.33 ms (11)
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Factories 25.12 ms (1)
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.23 ms (1)
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:43:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:22 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:43:22 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:43:22 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:22 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (9)
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Factories 24.07 ms (1)
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:43:22 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.86 ms (1)
+Jan 20 11:43:22 symfony [info] {sfWebResponse} Send content (28692 o)
+Jan 20 11:43:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:43:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:47 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:43:47 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:43:47 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:47 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:43:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:47 symfony [info] {sfWebDebugLogger} Configuration 1.08 ms (9)
+Jan 20 11:43:47 symfony [info] {sfWebDebugLogger} Factories 25.09 ms (1)
+Jan 20 11:43:47 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:43:47 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.76 ms (1)
+Jan 20 11:43:47 symfony [info] {sfWebResponse} Send content (28741 o)
+Jan 20 11:43:50 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:50 symfony [info] {sfBasicSecurityFilter} Action "commande/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:50 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:43:50 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Configuration 1.48 ms (13)
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Factories 24.05 ms (1)
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.20 ms (1)
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:43:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:50 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:43:50 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:43:50 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:50 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Configuration 1.02 ms (9)
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Factories 25.10 ms (1)
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:43:50 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.53 ms (1)
+Jan 20 11:43:50 symfony [info] {sfWebResponse} Send content (28793 o)
+Jan 20 11:43:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:43:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:43:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:43:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:43:57 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:43:57 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:43:57 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:57 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:43:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:43:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:43:57 symfony [info] {sfWebDebugLogger} Configuration 1.30 ms (9)
+Jan 20 11:43:57 symfony [info] {sfWebDebugLogger} Factories 32.62 ms (1)
+Jan 20 11:43:57 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:43:57 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 11.32 ms (1)
+Jan 20 11:43:57 symfony [info] {sfWebResponse} Send content (28734 o)
+Jan 20 11:44:02 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:02 symfony [info] {sfBasicSecurityFilter} Action "commande/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:02 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:02 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Configuration 1.55 ms (13)
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Factories 24.37 ms (1)
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.19 ms (1)
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:02 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:02 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:02 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:02 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Configuration 1.17 ms (9)
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Factories 27.32 ms (1)
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:44:02 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.18 ms (1)
+Jan 20 11:44:02 symfony [info] {sfWebResponse} Send content (28701 o)
+Jan 20 11:44:03 symfony [info] {sfPatternRouting} Match route "article" (/article.:sf_format) for /article with parameters array (  'module' => 'article',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfBasicSecurityFilter} Action "article/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:03 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:03 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Configuration 1.51 ms (13)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Factories 23.87 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.22 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:03 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (9)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Factories 25.62 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.77 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send content (28701 o)
+Jan 20 11:44:03 symfony [info] {sfPatternRouting} Match route "categorie" (/categorie.:sf_format) for /categorie with parameters array (  'module' => 'categorie',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfBasicSecurityFilter} Action "categorie/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:03 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:03 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Configuration 1.58 ms (13)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Factories 24.93 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.31 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:03 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:03 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Configuration 1.12 ms (9)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Factories 24.53 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 8.57 ms (1)
+Jan 20 11:44:03 symfony [info] {sfWebResponse} Send content (28701 o)
+Jan 20 11:44:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/login with parameters array (  'module' => 'securite',  'action' => 'login',)
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:04 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:04 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Configuration 0.90 ms (8)
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Factories 24.27 ms (1)
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.19 ms (1)
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:04 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:04 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:04 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:04 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Configuration 1.07 ms (9)
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Factories 23.63 ms (1)
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.19 ms (1)
+Jan 20 11:44:04 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.28 ms (1)
+Jan 20 11:44:04 symfony [info] {sfWebResponse} Send content (28701 o)
+Jan 20 11:44:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/login with parameters array (  'module' => 'securite',  'action' => 'login',)
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:07 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:07 symfony [info] {myUser} User is authenticated
+Jan 20 11:44:07 symfony [info] {myUser} Add credential(s) "admin"
+Jan 20 11:44:07 symfony [info] {securiteActions} Forward to action "categorie/index"
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:07 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 20 11:44:07 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:44:07 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `categorie`
+Jan 20 11:44:07 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/indexSuccess.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_assets.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_flashes.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_header.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_th_tabular.php"
+Jan 20 11:44:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:07 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie` LIMIT 20
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_batch_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_actions.php"
+Jan 20 11:44:07 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_footer.php"
+Jan 20 11:44:07 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:07 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Configuration 1.69 ms (14)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Factories 24.98 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Action "securite/login" 57.08 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Action "categorie/index" 21.25 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/index" 30.91 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_assets" 0.49 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_flashes" 0.42 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_header" 0.39 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters" 6.59 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters_field" 2.88 ms (2)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list" 9.70 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_th_tabular" 1.41 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_batch_actions" 0.97 ms (2)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_tabular" 1.20 ms (2)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_actions" 2.69 ms (2)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_batch_actions" 0.76 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_actions" 0.47 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_footer" 0.37 ms (1)
+Jan 20 11:44:07 symfony [info] {sfWebResponse} Send content (71592 o)
+Jan 20 11:44:09 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:09 symfony [info] {commandeActions} Call "commandeActions->executeIndex()"
+Jan 20 11:44:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.3 MB | mempeak:    7.3 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:44:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.5 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `commande`
+Jan 20 11:44:09 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/indexSuccess.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_assets.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_flashes.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_header.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:44:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SELECT client.ID, client.NOM, client.PRENOM, client.ADRESSE, client.MAIL, client.TELEPHONE FROM `client`
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_filters_field.php"
+Jan 20 11:44:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article`
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_th_tabular.php"
+Jan 20 11:44:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT commande.CLIENT_ID, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande` LIMIT 20
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_batch_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_tabular.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_td_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_batch_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_actions.php"
+Jan 20 11:44:09 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCommande/templates/_list_footer.php"
+Jan 20 11:44:09 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:09 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Configuration 1.41 ms (11)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Factories 24.21 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Action "commande/index" 25.25 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} View "Success" for "commande/index" 57.53 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_assets" 0.40 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_flashes" 0.39 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_header" 0.34 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_filters" 22.23 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_filters_field" 17.40 ms (4)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list" 21.02 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_th_tabular" 1.78 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_batch_actions" 1.21 ms (3)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_tabular" 10.55 ms (3)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_td_actions" 3.85 ms (3)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_batch_actions" 0.86 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_actions" 0.57 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebDebugLogger} Partial "commande/_list_footer" 0.36 ms (1)
+Jan 20 11:44:09 symfony [info] {sfWebResponse} Send content (89128 o)
+Jan 20 11:44:10 symfony [info] {sfPatternRouting} Match route "article" (/article.:sf_format) for /article with parameters array (  'module' => 'article',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:10 symfony [info] {articleActions} Call "articleActions->executeIndex()"
+Jan 20 11:44:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:44:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.3 MB | mempeak:    7.3 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `article`
+Jan 20 11:44:10 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/indexSuccess.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_assets.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_flashes.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_header.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.5 MB | mempeak:    8.5 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie`
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_filters_field.php"
+Jan 20 11:44:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.8 MB | mempeak:    8.8 MB | memdelta:      0.0 B | SELECT commande.CLIENT_ID, commande.CREATED_AT, commande.ETAT, commande.ID FROM `commande`
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_th_tabular.php"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT article.ID, article.NOM, article.PRIX, article.DESCRIPTION, article.POPULARITE, article.STOCK, article.CATEGORIE_ID FROM `article` LIMIT 20
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_batch_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_tabular.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_batch_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_tabular.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_td_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_batch_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_actions.php"
+Jan 20 11:44:10 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoArticle/templates/_list_footer.php"
+Jan 20 11:44:10 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:10 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Configuration 1.29 ms (11)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Factories 24.33 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Action "article/index" 22.85 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} View "Success" for "article/index" 46.76 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_assets" 0.39 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_flashes" 0.39 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_header" 0.34 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_filters" 22.65 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_filters_field" 16.64 ms (7)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list" 10.57 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_th_tabular" 2.89 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_batch_actions" 0.84 ms (2)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_tabular" 1.22 ms (2)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_td_actions" 2.37 ms (2)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_batch_actions" 0.72 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_actions" 0.50 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebDebugLogger} Partial "article/_list_footer" 0.36 ms (1)
+Jan 20 11:44:10 symfony [info] {sfWebResponse} Send content (98230 o)
+Jan 20 11:44:11 symfony [info] {sfPatternRouting} Match route "categorie" (/categorie.:sf_format) for /categorie with parameters array (  'module' => 'categorie',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:11 symfony [info] {categorieActions} Call "categorieActions->executeIndex()"
+Jan 20 11:44:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+Jan 20 11:44:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.0 MB | mempeak:    7.0 MB | memdelta:      0.0 B | SELECT COUNT(*) FROM `categorie`
+Jan 20 11:44:11 symfony [info] {sfPHPView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/indexSuccess.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_assets.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_flashes.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_header.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_filters_field.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_th_tabular.php"
+Jan 20 11:44:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Jan 20 11:44:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT categorie.ID, categorie.NOM, categorie.DESCRIPTION FROM `categorie` LIMIT 20
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_batch_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_tabular.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_td_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_batch_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_actions.php"
+Jan 20 11:44:11 symfony [info] {sfPartialView} Render "/var/www/site/tc5/cache/boutique/dev/modules/autoCategorie/templates/_list_footer.php"
+Jan 20 11:44:11 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:11 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Configuration 1.38 ms (11)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Factories 24.97 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Action "categorie/index" 21.03 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} View "Success" for "categorie/index" 29.92 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_assets" 0.42 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_flashes" 0.38 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_header" 0.35 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters" 5.75 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_filters_field" 2.45 ms (2)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list" 10.67 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_th_tabular" 1.40 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_batch_actions" 2.09 ms (2)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_tabular" 1.20 ms (2)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_td_actions" 2.61 ms (2)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_batch_actions" 0.79 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_actions" 0.48 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebDebugLogger} Partial "categorie/_list_footer" 0.34 ms (1)
+Jan 20 11:44:11 symfony [info] {sfWebResponse} Send content (68369 o)
+Jan 20 11:44:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /securite/deconnection with parameters array (  'module' => 'securite',  'action' => 'deconnection',)
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:12 symfony [info] {securiteActions} Call "securiteActions->executeDeconnection()"
+Jan 20 11:44:12 symfony [info] {myUser} User is not authenticated
+Jan 20 11:44:12 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Configuration 0.95 ms (8)
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Factories 24.10 ms (1)
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Action "securite/deconnection" 1.30 ms (1)
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:12 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:12 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:12 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:12 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (9)
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Factories 24.09 ms (1)
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:44:12 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 7.97 ms (1)
+Jan 20 11:44:12 symfony [info] {sfWebResponse} Send content (28702 o)
+Jan 20 11:44:13 symfony [info] {sfPatternRouting} Match route "article" (/article.:sf_format) for /article with parameters array (  'module' => 'article',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfBasicSecurityFilter} Action "article/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:13 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:13 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (13)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Factories 25.41 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.24 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:13 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Configuration 1.07 ms (9)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Factories 24.27 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.09 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 7.98 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send content (28701 o)
+Jan 20 11:44:13 symfony [info] {sfPatternRouting} Match route "commande" (/commande.:sf_format) for /commande with parameters array (  'module' => 'commande',  'action' => 'index',  'sf_format' => 'html',)
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfBasicSecurityFilter} Action "commande/index" requires authentication, forwarding to "securite/login"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:13 symfony [info] {securiteActions} Call "securiteActions->executeLogin()"
+Jan 20 11:44:13 symfony [info] {sfFrontWebController} Redirect to "http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Location: http://localhost/site/tc5/web/boutique_dev.php/securite"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (13)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Factories 24.36 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Action "securite/login" 1.20 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send content (126 o)
+Jan 20 11:44:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /securite with parameters array (  'module' => 'securite',  'action' => 'index',)
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 20 11:44:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 20 11:44:13 symfony [info] {securiteActions} Call "securiteActions->executeIndex()"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/modules/securite/templates/indexSuccess.php"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Decorate content with "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:13 symfony [info] {sfPHPView} Render "/var/www/site/tc5/apps/boutique/templates/layout.php"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Configuration 1.01 ms (9)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Factories 25.02 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} Action "securite/index" 0.10 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebDebugLogger} View "Success" for "securite/index" 9.21 ms (1)
+Jan 20 11:44:13 symfony [info] {sfWebResponse} Send content (28701 o)

@@ -9,6 +9,9 @@
       <th>Popularite</th>
       <th>Stock</th>
       <th>Categorie</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +20,7 @@
       
         <tr>
           <td><a href="<?php echo url_for('article/show?id='.$Article->getId()) ?>"><?php echo $Article->getNom() ?></a></td>
-          <td><?php echo $Article->getPrix() ?></td>
+          <td><?php echo $Article->getPrix() ?> €</td>
           <td><?php echo $Article->getDescription() ?></td>
           <td><?php echo $Article->getPopularite() ?></td>
           <td><?php echo $Article->getStock() ?></td>

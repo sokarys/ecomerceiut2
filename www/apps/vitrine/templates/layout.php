@@ -14,23 +14,26 @@
           <h1>Bienvenue sur dreamland</h1><br/>
           <p>Le site qui vend du rêve</p>
       </div>
-      <div>
+      <div id="menu">
           <h3>menu</h3>
-          <a href="<?php echo url_for('categorie/index') ?>">Les catégories d'articles</a>
-          <a href="<?php echo url_for('panier/index') ?>">Panier</a>
-          <a href="<?php echo url_for('client/index') ?>">Mon profil</a>
+
+          <a href="<?php echo url_for('categorie/index') ?>">Les catégories d'articles</a><br/>
+          <a href="<?php echo url_for('panier/index') ?>">Panier</a><br/>
+          <a href="<?php echo url_for('client/index') ?>">Mon profil</a><br/>
           <?php if($sf_user->hasAttribute('client')){ ?>
           <?php     if($sf_user->getAttribute('client') != null){?>
-                    <a href="<?php echo url_for('client/deconnection') ?>">Déconnection</a>
+                    <a href="<?php echo url_for('client/deconnection') ?>">Déconnection</a><br/>
                <?php }else{?>
-                    <a href="<?php echo url_for('client/login') ?>">Connection</a>
+                    <a href="<?php echo url_for('client/login') ?>">Connection</a><br/>
                <?php }?>
            <?php }else {?>
-                    <a href="<?php echo url_for('client/login') ?>">Connection</a>
+                    <a href="<?php echo url_for('client/login') ?>">Connection</a><br/>
            <?php }?>
           
       </div>
-
-    <?php echo $sf_content ?>
+      <div id="corps">
+        <?php echo $sf_content ?>
+      </div>
+      
   </body>
 </html>

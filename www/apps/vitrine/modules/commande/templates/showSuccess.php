@@ -23,8 +23,4 @@
   </tbody>
 </table>
 
-<hr />
 
-<a href="<?php echo url_for('commande/edit?id='.$Commande->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('commande/index') ?>">List</a>

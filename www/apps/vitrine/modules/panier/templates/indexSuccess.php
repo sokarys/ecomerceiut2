@@ -22,10 +22,10 @@
                    
                    <tr>
                        <form method="post" action="<?php echo url_for1('panier/modif');?>">
-                           <td><?php echo $art->getNom(); ?></td>
-                           <td><?php echo $art->getArticle()->getPrix(); ?></td>
+                           <td><a href="<?php echo url_for('article/show?id='.$art->getArticle()->getId()) ?>"><?php echo $art->getNom(); ?></a></td>
+                           <td><?php echo $art->getArticle()->getPrix(); ?> €</td>
                            <td><input type="text" name="quantite" value="<?php echo $art->getQuantite(); ?>" /></td>
-                           <td><?php echo $art->getPrix(); ?></td>
+                           <td><?php echo $art->getPrix(); ?> €</td>
                            <td><input type="text" name="add_article_id" style="display:none;" value="<?php echo $art->getArticle()->getId(); ?>" /></td>
                            <td><input type="submit" value="modifier"/></td>
                         </form>
@@ -39,7 +39,7 @@
       <?php }?>
   </tbody>  
 </table>
-<p> Prix total : <?php echo $panier->getPrixTotal(); ?> </p>
+<p> Prix total : <?php echo $panier->getPrixTotal(); ?> € </p>
 
 <p> <?php if($sf_user->hasAttribute("stock")){
     if($sf_user->getAttribute("stock") == true){

@@ -14,8 +14,8 @@
     <tr>
       <td><?php echo $LigneCommande->getArticle()->getNom() ?></td>
       <td><?php echo $LigneCommande->getQuantite() ?></td>
-      <td><?php echo $LigneCommande->getArticle()->getPrix() ?></td>
-      <td><?php echo $LigneCommande->getPrix() ?></td>
+      <td><?php echo $LigneCommande->getArticle()->getPrix() ?> €</td>
+      <td><?php echo $LigneCommande->getPrix() ?> €</td>
     </tr>
     <?php endforeach; ?>
   </tbody>

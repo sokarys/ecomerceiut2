@@ -16,7 +16,7 @@
     <?php foreach ($Commandes as $Commande): ?>
     <tr>
       <td><?php echo $Commande->getClientId() ?></td>
-      <td><?php echo $Commande->getPrix() ?></td>
+      <td><?php echo $Commande->getPrix() ?> €</td>
       <td><?php echo $Commande->getCreatedAt() ?></td>
       <td><?php echo $Commande->getEtat() ?></td>
       <td><a href="<?php echo url_for('commande/show?id='.$Commande->getId()) ?>"><?php echo $Commande->getId() ?></a></td>
@@ -25,4 +25,3 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('commande/new') ?>">New</a>

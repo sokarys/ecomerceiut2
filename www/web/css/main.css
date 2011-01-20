@@ -11,10 +11,6 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
-root {
-
-}
-
 body{
     margin-left:auto;
     margin-right:auto;
@@ -59,7 +55,7 @@ table th{
     -moz-border-radius:15px 15px 15px 15px;
      border:3px solid #003366;
      padding:10px;
-     margin-left:10%;
+     margin-left:5px;     
 }
 #corps{
     float:left;

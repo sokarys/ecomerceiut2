@@ -10,22 +10,26 @@
   </head>
   <body>
 
-    <?php echo $sf_content ?>
+      <div style="text-align:center;">
+          <h1>Bienvenue sur dreamland</h1><br/>
+          <p>Le site qui vend du rêve</p>
+      </div>
+      
+    
 
-      <div>
+      <div id="menu" >
           <h3>menu</h3>
-          <a href="<?php echo url_for('categorie') ?>">Categories</a>
-          <a href="<?php echo url_for('commande') ?>">Commande</a>
-          <a href="<?php echo url_for('article') ?>">Articles</a>
-          <a href="<?php echo url_for('securite/index') ?>">Mon profil</a>
-          
+          <a href="<?php echo url_for('categorie') ?>">Categories</a><br />
+          <a href="<?php echo url_for('commande') ?>">Commande</a><br />
+          <a href="<?php echo url_for('article') ?>">Articles</a><br />
           <?php     if($sf_user->isAuthenticated()){?>
-                    <a href="<?php echo url_for('securite/deconnection') ?>">Déconnection</a>
+                    <a href="<?php echo url_for('securite/deconnection') ?>">Déconnection</a><br />
                <?php }else{?>
-                    <a href="<?php echo url_for('securite/login') ?>">Connection</a>
+                    <a href="<?php echo url_for('securite/login') ?>">Connection</a><br />
                <?php }?>
-           
-
+      </div>
+      <div id="corps" >
+      <?php echo $sf_content ?>
       </div>
   </body>
 </html>

@@ -13,7 +13,7 @@
     <tr>
       
       <td><?php echo $Article->getNom() ?></td>
-      <td><?php echo $Article->getPrix() ?></td>
+      <td><?php echo $Article->getPrix() ?> €</td>
      <td><?php echo $Article->getDescription() ?></td>
      <td><?php echo $Article->getPopularite() ?></td>
     

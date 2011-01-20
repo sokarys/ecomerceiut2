@@ -36,7 +36,7 @@
             <td><a href="<?php echo url_for('lignecommande/index?id='.$commande->getId()); ?>" ><?php echo $commande->getId(); ?></a></td>
             <td><?php echo $commande->getEtat(); ?></td>
             <td><?php echo $commande->getCreatedAt(); ?></td>
-            <td><?php echo $commande->getPrix(); ?></td>
+            <td><?php echo $commande->getPrix(); ?> €</td>
         </tr>
     <?php } ?>
     </table>
