@@ -32,9 +32,14 @@ class Panier {
          if (array_key_exists($a->getArticle()->getId(),$this->articles) && $a->getQuantite()==0){
             $this->delArticle($a->getArticle()->getId());
          }else if (array_key_exists($a->getArticle()->getId(),$this->articles)){
-            return $this->articles[$a->getArticle()->getId()]->setQuantite($a->getQuantite());
-         } else {
-            $this->articles[$a->getArticle()->getId()] = $a;
+                return $this->articles[$a->getArticle()->getId()]->setQuantite($a->getQuantite());
+         } else if($a->getStock() > 0){
+            if($a->getQuantite() <= $a->getStock() && $a->getQuantite() > 0){
+                $this->articles[$a->getArticle()->getId()] = $a;
+            }else if($a->getQuantite() > $a->getStock()){
+                $a->setQuantite($a->getStock());
+                $this->articles[$a->getArticle()->getId()] = $a;
+            }
          }
          return false;
     }
@@ -86,6 +91,8 @@ class Panier {
             $ligneCommande->setCommande($commande);
             $ligneCommande->setArticle($a->getArticle());
             $ligneCommande->setQuantite($a->getQuantite());
+            $a->getArticle()->setStock($a->getArticle()->getStock() - $a->getQuantite());
+            $a->getArticle()->setPopularite($a->getArticle()->getPopularite() + 1);
             $ligneCommande->setPrix($a->getPrix());
             $ligneCommande->save();
         }

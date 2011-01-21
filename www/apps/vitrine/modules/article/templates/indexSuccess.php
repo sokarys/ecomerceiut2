@@ -25,9 +25,11 @@
           <td><?php echo $Article->getPopularite() ?></td>
           <td><?php echo $Article->getStock() ?></td>
           <td><?php echo $Article->getCategorieId() ?></td>
+          <?php if($Article->getStock()>0){ ?>
           <td><input type="text" style="display: none;" name="add_article_id" value="<?php echo $Article->getId(); ?>"/></td>
           <td><input type="text" name="quantite" size="3" value="1"/></td>
           <td><input type="submit" value="ajouter"/>
+           <?php } ?>
         </tr>
      </form>
     <?php endforeach; ?>

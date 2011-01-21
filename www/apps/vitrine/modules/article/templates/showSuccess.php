@@ -22,7 +22,7 @@
     </tr>
   </tbody>
 </table>
-
+<?php if($Article->getStock()>0){?>
  <form method="post" action="<?php echo url_for1('panier/ajoutadd')?>">
      <table>
         <tr>
@@ -32,5 +32,6 @@
         </tr>
      </table>
  </form>
+<?php } ?>
 
 <hr />

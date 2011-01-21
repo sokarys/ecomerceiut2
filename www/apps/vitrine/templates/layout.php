@@ -25,9 +25,11 @@
                     <a href="<?php echo url_for('client/deconnection') ?>">Déconnection</a><br/>
                <?php }else{?>
                     <a href="<?php echo url_for('client/login') ?>">Connection</a><br/>
+                    <a href="<?php echo url_for('client/new') ?>">Inscription</a><br/>
                <?php }?>
            <?php }else {?>
                     <a href="<?php echo url_for('client/login') ?>">Connection</a><br/>
+                    <a href="<?php echo url_for('client/new') ?>">Inscription</a><br/>
            <?php }?>
           
       </div>

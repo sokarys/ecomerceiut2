@@ -94,14 +94,39 @@ class clientActions extends sfActions
 
   public function executeCreate(sfWebRequest $request)
   {
-    $this->forward404Unless($request->isMethod(sfRequest::POST));
+     if($request->hasParameter('name') && $request->hasParameter('prenom') && $request->hasParameter('mail')
+             && $request->hasParameter('adresse') && $request->hasParameter('tel') ){
+         $name = $request->getParameter('name');
+         $prenom = $request->getParameter('prenom');
+         $mail = $request->getParameter('mail');
+         $adresse = $request->getParameter('adresse');
+         $tel = $request->getParameter('tel');
 
-    $this->form = new ClientForm();
+         $c = new Criteria();
+         $c->add(ClientPeer::MAIL,$mail);
+         $nbClient = ClientPeer::doCount($c);
 
-    $this->processForm($request, $this->form);
-
-    $this->setTemplate('new');
+         if($nbClient == 0 && $name != "" && $prenom != "" && $mail != "" && $adresse != "" && $tel != ""){
+             $client = new Client();
+             $client->setMail($mail);
+             $client->setPrenom($prenom);
+             $client->setTelephone($tel);
+             $client->setNom($name);
+             $client->setAdresse($adresse);
+             $client->save();
+             $this->redirect('client/login');
+         }else{
+            $this->redirect('client/failcreate');
+         }
+     }else{
+         $this->redirect('client/failcreate');
+     }
+   
+    
   }
+  public function  executeFailcreate(sfWebRequest $request) {
+            
+    }
 
   public function executeEdit(sfWebRequest $request)
   {

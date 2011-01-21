@@ -87,7 +87,7 @@ class panierActions extends sfActions
                 $this->redirect('client/index');
             }
         }
-        $this->redirect('commande/index');
+        $this->redirect('client/index');
    }
 }
 
