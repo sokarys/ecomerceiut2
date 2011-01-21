@@ -1,4 +1,4 @@
-<h1>Liste des articles de notre catégorie</h1>
+<h1>Les Articles</h1>
 
 <table>
   <thead>
@@ -24,7 +24,7 @@
           <td><?php echo $Article->getDescription() ?></td>
           <td><?php echo $Article->getPopularite() ?></td>
           <td><?php echo $Article->getStock() ?></td>
-          <td><?php echo $Article->getCategorieId() ?></td>
+          <td><?php echo $Article->getCategorie()->getNom() ?></td>
           <?php if($Article->getStock()>0){ ?>
           <td><input type="text" style="display: none;" name="add_article_id" value="<?php echo $Article->getId(); ?>"/></td>
           <td><input type="text" name="quantite" size="3" value="1"/></td>

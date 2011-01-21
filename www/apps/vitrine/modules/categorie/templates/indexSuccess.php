@@ -1,4 +1,4 @@
-<h1>Liste des catégories de nos articles</h1>
+<h1>Les différentes catégories</h1>
 
 <table>
   <thead>

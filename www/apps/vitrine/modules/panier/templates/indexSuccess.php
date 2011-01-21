@@ -1,4 +1,4 @@
-<h1>Liste des articles de notre catégorie</h1>
+<h1>Panier</h1>
 
 <table>
   <thead>

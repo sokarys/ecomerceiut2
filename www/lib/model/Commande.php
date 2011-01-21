@@ -26,7 +26,7 @@ class Commande extends BaseCommande {
         $c->add(LigneCommandePeer::COMMANDE_ID,$this->getId());
         $array = LigneCommandePeer::doSelect($c);
         foreach(  $array as $com){
-            $total+=($com->getPrix()*$com->getQuantite());
+            $total+=($com->getPrix());
         }
         return $total;
     }

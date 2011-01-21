@@ -1,4 +1,4 @@
-<h1>Commandes List</h1>
+<h1>Liste des Commandes</h1>
 
 <table>
   <thead>

@@ -93,8 +93,8 @@ class Panier {
             $ligneCommande->setQuantite($a->getQuantite());
             $a->getArticle()->setStock($a->getArticle()->getStock() - $a->getQuantite());
             $a->getArticle()->setPopularite($a->getArticle()->getPopularite() + 1);
-            $ligneCommande->setPrix($a->getPrix());
-            $ligneCommande->save();
+            $ligneCommande->setPrix($a->getArticle()->getPrix() * $a->getQuantite());
+            //$ligneCommande->save();
         }
         $commande->save();
         $this->DelleteAll();

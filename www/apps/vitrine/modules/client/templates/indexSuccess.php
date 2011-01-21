@@ -1,4 +1,4 @@
-<h1>Clients List</h1>
+<h1>Les Clients</h1>
 
 <table>
   <thead>

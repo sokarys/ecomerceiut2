@@ -1,4 +1,4 @@
-<h1>LigneCommandes List</h1>
+<h1>Articles Commandés</h1>
 
 <table>
   <thead>
